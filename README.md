@@ -1,8 +1,9 @@
 # OSwhitepaper
- White paper on open source principles and practical applications for VisionEval 
+White paper on open source principles and practical applications for VisionEval 
 
 ## How to contribute comments or edits
 
+If you are logged in and a contributor to this repostory, you can add comments or edits to the white paper using the following methods:
 
 1. Directly edit the `whitepaper.md` file on GitHub. Changes will be tracked in the git history
 + On GitHub, select the `whitepaper.md` file 
@@ -32,3 +33,5 @@
 + Open `.md` files in RStudio or other editors
 + Make changes, push commits to master or create pull request as for other code
 + Issues need to be created on GitHub, however
+
+[See this page](https://help.github.com/articles/basic-writing-and-formatting-syntax/) for additional tips on formatting a markdown document. Additional markdown topics are covered [here](https://guides.github.com/features/mastering-markdown/).

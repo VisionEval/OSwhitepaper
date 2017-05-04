@@ -6,9 +6,11 @@
 
 1. Directly edit the `whitepaper.md` file on GitHub. Changes will be tracked in the git history
 + On GitHub, select the `whitepaper.md` file 
++ Click the pencil icon to make edits to the text
 + Make changes directly to the text
 + Scroll down to the bottom of the page and add a comment about what the changes entail
 + Click 'Commit changes' to commit changes to the master branch.
++ Alternatively, can make edits and create a pull request
 
 2. Create an Issue to make a general comment, for example regarding overall structure or the direction of the white paper 
 + Click on the Issues tab at the top of the page

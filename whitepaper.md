@@ -54,7 +54,7 @@ Discuss the best practices for open source development; the role of the develope
 
 -	Follow GitHub procedures outlined below for version control and collaboration
 -	Establish repository - include RPAT work under AASHTO, previous versions of RPAT
--	Add Code - preparing for new version of RPAT.
+-	Add Code - preparing for new version of RPAT
 -	Add features, remove bugs
 -	Document and release
 
@@ -72,7 +72,8 @@ Discuss the best practices for open source development; the role of the develope
 
 ### Documenting and Updating
 
--	Moving from beta to release versions
+-	Project background and user guides
+-   Moving from beta to release versions
 -	Documenting changes in release versions
 -	Continuous work on development versions
 

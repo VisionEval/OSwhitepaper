@@ -17,7 +17,7 @@ If you are logged in and a contributor to this repostory, you can add comments o
 + Click on the Issues tab at the top of the page
 + Title the comment with a brief description
 + Add comment
-+ Optionlly assign a specific person to address this issue 
++ Optionally assign a specific person to address this issue 
 
 3. Add a comment in the `whitepaper.md` file by enclosing the comment in the following characters:
 

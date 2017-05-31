@@ -39,7 +39,7 @@ Draft Objectives for discussion
 
 *	Define open source
 
-Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. The  
+Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  
 
 
 *	Intellectual property
@@ -72,6 +72,8 @@ For a research project such as VisionEval, a permissive license such as the [MIT
 
 -	Roles: Users, developers, administrators.
 -	Resources ($) required, and how to obtain them
+
+The distinction between commercial software projects and non-profit software projects provides a useful comparison for evaluating governance mechanism. The Android and Linux operating systems are both open source, but differ in their management of contributions from the community [@Bettenburg2015].
 
 ## 3.	Open source development   <a name = "opensourcedevelopment"></a>
 
@@ -147,6 +149,8 @@ This sends an email to the proposed new repository owner, asking them to confirm
 -	Role of the community of users
 -	Gatekeeping versus crowdsource 
 -	Merging branches, maintaining stable trunk
+
+Unlike proprietary software project, open source research projects distinguish between a developer and user community. Contributions from the user community may be rare, typically limited to testing and bug reporting [@Aksulu2010].
 
 ### Testing new contributions
 

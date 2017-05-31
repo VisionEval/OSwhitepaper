@@ -38,4 +38,4 @@ If you are logged in and a contributor to this repostory, you can add comments o
 
 ## Working with references
 
-References are in [`bibtex`](http://www.bibtex.org/) format, in the `refs` folder. This is an open source format for organizing citations. The software [JabRev](https://github.com/JabRef/jabref/releases/tag/v3.8.2) provides a cross-platform tool for storing and organizing citations in a `.bib` refrence library.
+References are in [`bibtex`](http://www.bibtex.org/) format, in the `refs` folder. This is an open source format for organizing citations. The software [JabRef](https://github.com/JabRef/jabref/releases/tag/v3.8.2) provides a cross-platform tool for storing and organizing citations in a `.bib` refrence library.

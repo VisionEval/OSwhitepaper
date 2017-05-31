@@ -5,8 +5,8 @@ White paper on open source principles and practical applications for VisionEval
 
 If you are logged in and a contributor to this repostory, you can add comments or edits to the white paper using the following methods:
 
-1. Directly edit the `whitepaper.md` file on GitHub. Changes will be tracked in the git history
-+ On GitHub, select the `whitepaper.md` file 
+1. Directly edit the `VEwhitepaper.md` file on GitHub. Changes will be tracked in the git history
++ On GitHub, select the `VEwhitepaper.md` file 
 + Click the pencil icon to make edits to the text
 + Make changes directly to the text
 + Scroll down to the bottom of the page and add a comment about what the changes entail
@@ -19,7 +19,7 @@ If you are logged in and a contributor to this repostory, you can add comments o
 + Add comment
 + Optionally assign a specific person to address this issue 
 
-3. Add a comment in the `whitepaper.md` file by enclosing the comment in the following characters:
+3. Add a comment in the `VEwhitepaper.md` file by enclosing the comment in the following characters:
 
     `<!-- Add comment here -->`
 
@@ -35,3 +35,7 @@ If you are logged in and a contributor to this repostory, you can add comments o
 + Issues need to be created on GitHub, however
 
 [See this page](https://help.github.com/articles/basic-writing-and-formatting-syntax/) for additional tips on formatting a markdown document. Additional markdown topics are covered [here](https://guides.github.com/features/mastering-markdown/).
+
+## Working with references
+
+References are in [`bibtex`](http://www.bibtex.org/) format, in the `refs` folder. This is an open source format for organizing citations. The software [JabRev](https://github.com/JabRef/jabref/releases/tag/v3.8.2) provides a cross-platform tool for storing and organizing citations in a `.bib` refrence library.

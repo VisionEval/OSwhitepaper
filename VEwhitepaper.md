@@ -1,0 +1,186 @@
+---
+output: 
+  html_document
+bibliography: refs/vewhitepaper.bib
+---
+
+# Open Source Projects: Best Practices for VisionEval
+
+*Draft*
+
+This document outlines the proposed Best Practices whitepaper for the VisionEval project, regarding need for an open source approach to develop this collaborative research platform. 
+
+Open source development of software provides a platform for software users and developers to engage in continuous improvement in a collaborative network. Collaboration via open source software development aligns with goals of public agencies involved in transportation planning, with a need to support freely-available decisionmaking tools which can be continuously improved by the user community.
+
+[VisionEval](https://github.com/gregorbj/VisionEval) provides a framework for building collaborative, disaggregate strategic planning models. This open-source framework is the result of collaborations among partner agencies, namely the Federal Highway Administration (FHWA) and the Oregon Department of Transportation (OregonDOT). The VisionEval framework aims to support a broad array of potential uses, and thus will require a plan for incorporating software contributed by the user and developer community to extend the current functionality beyond the current modules. 
+This paper provides an overview of best practices for open source software development for the VisionEval project. In particular, this paper outlines the process by which contributions will be evaluated and reviewed, and describes how version control and collaboration tools can be used to achieve this goal.
+
+# Table of Contents
+1. [Introduction](#introduction)
+2. [Open Source Governance](#opensourcegovernance)
+3. [Open Source Development](#opensourcedevelopment)
+4. [Git and GitHub](#git)
+4. [Summary](#summary)
+
+## 1.	Introduction 
+
+<!-- Discuss open source framework development of VisionEval, with an overview of best practices applicable to this project. -->
+
+<!-- Brian Gardner Comment 2017-04-14
+This enables a multi-year, collaborative research effort.
+It is not a line of business IT system.
+We will organize accordingly.
+
+Draft Objectives for discussion
+1)	 Maintenance of open access to research results to all parties through aggregated copyrights
+2)	 Ability to build on prior research with clear copyrights
+3)	 Enable collective action across sectors and participants while maintaining equal access
+--> 
+
+*	Define open source
+
+Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. The  
+
+
+*	Intellectual property
+    +	Maintenance of open access to research results for all parties through aggregated copyrights
+    +	Ability to build on prior research with clear copyrights
+*	Enable collective action across sectors and participants while maintaining equal access
+*	Examples of successful open source projects (R, QGIS)
+
+The 'openness' of open source projects is protected by copyrights such as the General Public License (GPL). The original GPL license, developed in the 1980's by the Free Software Foundation [@VonKrogh2003] ensured that those the right to use, study, modify, and distribute modified or unmodified code at no cost was preserved. Licences are key to preserving open source development, allowing users to contribute code without concerns that the code will be locked in a proprietary software in the future.
+
+Software licenses can be chosen to reflect the needs of the project, using tools such as https://choosealicense.com/. The key elements of an open source license include the the following:
+
+- Permission to modify code
+- Permission to use commercially or privately
+- Permission to distribute freely
+- Attribution of authorship
+- Limitations of liability and warranty
+- Ability to patent the elements of code contributed
+- Requirement that any derived code follow the license of the original code
+
+The first three elements are common to all open source licenses. Attribution of authorship is typical, and ensures that derivative work based on the original code attributes the author. For example, the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) license states:
+
+> <sub> You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works. </sub>
+
+Patent protection is granted by some licenses, such as the Apache 2.0 license. This means that commercial ventures may contribute code to an open source project and still apply for a patent on that contributed code.  
+
+For a research project such as VisionEval, a permissive license such as the [MIT license](https://choosealicense.com/licenses/mit/) would balance the need for preservation of copyright and attribution of authorship while promoting widespread use. 
+
+## 2.	Open source governance <a name = "opensourcegovernance"></a>
+
+-	Roles: Users, developers, administrators.
+-	Resources ($) required, and how to obtain them
+
+## 3.	Open source development   <a name = "opensourcedevelopment"></a>
+
+<!-- Brian Gardner Comment 2017-04-14
+We will need to accomplish in the initial phase
+1)	 uptake of the AASHTO contract work on RPAT
+2)	 Host the prior versions of RPAT
+3)	 Release a new major version
+4)	 Make at least one maintenance release
+
+5)	 Define a relationship or uptake the ODOT sponsored work
+
+Let's use these tasks to test initial procedures and repository organizations, with input from ODOT on TLUMIP. 
+
+Lean on:
+http://stackoverflow.com/documentation/git/topics
+-->
+
+Discuss the best practices for open source development; the role of the developers in contributing additions and patches; best practices for reviewing code and maintaining working code base; testing code under new scenarios; documenting and updating. This section will also propose procedures for VisionEval to incorporate previous work on modules such as RPAT, update that module, and release a new version.
+
+### Workflow for VisionEval
+
+-	Follow GitHub procedures outlined below for version control and collaboration
+-	Establish repository - include RPAT work under AASHTO, previous versions of RPAT
+-	Add Code - preparing for new version of RPAT
+-	Add features, remove bugs
+-	Document and release
+
+
+Typical `git` workflow involves a single master repository. Developers can fork that repository, make modifications, and then push those modifications back to the master. To have separate workspaces for some users (contractors) than others, one solution would be to have two git repositories.
+
+The process of copying from one repository to a second one, while preserving all the history, would be as follows:
+
+Using the [`git bash`](https://git-scm.com/) command line tool:
+
+1.	In top-level git directory, make a copy of existing repository using clone, and rename it 
+
+    `git clone github.com/username/originalrepo newrepo`
+
+2.	Go into that repository, delete the link to the original repository, and re-write each file to start new branch history using filter-branch. This needs to be done for each top-level subdirectory in the repository, where `foldername` refers to a given subdirectory.
+
+    `cd newrepo`
+    
+    `git remote rm origin`
+    
+    `git filter-branch -subdirectory-filter foldername -- --all`
+
+3.	Now make a new directory and place all those re-written files in the new directory. As above, `foldername` refers to the subdirectory name, and is the only variable which would change in this process. 
+
+    `mkdir foldername`
+    
+    `mv * foldername`
+    
+    `git add .`
+    
+    `git commit`
+
+    Add a commit message, hit `esc`, `:wq` to save and quit `vim`.
+
+4.	Push it to GitHub. Create the repository on GitHub first, then add this to the remote 
+
+    `git remote add origin https://github.com/username/newrepo`
+    
+    `git push -u origin master`
+
+5.	[Transfer this to another GitHub user](https://help.GitHub.com/articles/transferring-a-repository-owned-by-your-personal-account/
+)
+This sends an email to the proposed new repository owner, asking them to confirm it.
+
+
+### Reviewing contributions from multiple sources
+
+-	Role of the community of users
+-	Gatekeeping versus crowdsource 
+-	Merging branches, maintaining stable trunk
+
+### Testing new contributions
+
+-	Scenario testing
+-	Model data sets
+-	Compare output to prior model versions
+
+### Documenting and Updating
+
+-	Project background and user guides
+-   Moving from beta to release versions
+-	Documenting changes in release versions
+-	Continuous work on development versions
+
+## 4.	Git and GitHub  <a name = "git"></a>
+
+Discuss Git as a specific tool for version control and collaboration, to accomplish the workflow established above.
+
+-	Version control in Git
+    +	Master branch
+    +	Development branches
+    +	Merging with pull requests
+    +	Documenting changes
+-	Comparison with other tools: Apache Subversion (SVN), Mercurial (Hg), Bazaar
+-	Discuss web-based project management using GitHub, with issue tracking and wikis.
+-	Discuss user group engagement via listservs. 
+  +	Developer listserv 
+  +	User listserv
+
+## 5.	Summary  <a name = "summary"></a>
+
+-	Summarize best practices
+-	Recommend practices and tools for the VisionEval team.
+-	Next steps
+
+
+# References

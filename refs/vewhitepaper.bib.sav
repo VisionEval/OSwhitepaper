@@ -1,0 +1,140 @@
+% Encoding: UTF-8
+
+@Article{Mergel2015,
+  author    = {Mergel, Ines},
+  title     = {Open collaboration in the public sector: The case of social coding on github},
+  journal   = {Government Information Quarterly},
+  year      = {2015},
+  volume    = {32},
+  number    = {4},
+  pages     = {464--472},
+  publisher = {Elsevier},
+}
+
+@Article{Heistermann2015,
+  author  = {Heistermann, Maik and Collis, S and Dixon, MJ and Giangrande, S and Helmus, JJ and Kelley, B and Koistinen, J and Michelson, DB and Peura, M and Pfaff, T and others},
+  title   = {The emergence of open-source software for the weather radar community},
+  journal = {Bulletin of the American Meteorological Society},
+  year    = {2015},
+  volume  = {96},
+  number  = {1},
+  pages   = {117--128},
+}
+
+@InProceedings{Zhu2014,
+  author        = {Zhu, Jiaxin and Zhou, Minghui and Mockus, Audris},
+  title         = {Patterns of folder use and project popularity: A case study of GitHub repositories},
+  booktitle     = {Proceedings of the 8th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement},
+  year          = {2014},
+  pages         = {30},
+  organization  = {ACM},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+}
+
+@Article{Aksulu2010,
+  author        = {Aksulu, Altay and Wade, Michael},
+  title         = {A comprehensive review and synthesis of open source research},
+  journal       = {Journal of the Association for Information Systems},
+  year          = {2010},
+  volume        = {11},
+  number        = {11},
+  pages         = {576},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+  publisher     = {Association for Information Systems},
+}
+
+@InProceedings{Sethanandha2010,
+  author        = {Sethanandha, Bhuricha Deen and Massey, Bart and Jones, William},
+  title         = {Managing open source contributions for software project sustainability},
+  booktitle     = {Technology Management for Global Economic Growth (PICMET), 2010 Proceedings of PICMET'10:},
+  year          = {2010},
+  pages         = {1--9},
+  organization  = {IEEE},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+}
+
+@Article{VonKrogh2003,
+  author        = {Von Krogh, Georg},
+  title         = {Open-source software development},
+  journal       = {MIT Sloan Management Review},
+  year          = {2003},
+  volume        = {44},
+  number        = {3},
+  pages         = {14},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+  publisher     = {Massachusetts Institute of Technology, Cambridge, MA},
+}
+
+@Article{McIntosh2016,
+  author        = {McIntosh, Shane and Kamei, Yasutaka and Adams, Bram and Hassan, Ahmed E},
+  title         = {An empirical study of the impact of modern code review practices on software quality},
+  journal       = {Empirical Software Engineering},
+  year          = {2016},
+  volume        = {21},
+  number        = {5},
+  pages         = {2146--2189},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+  publisher     = {Springer},
+}
+
+@Article{Bettenburg2015,
+  author        = {Bettenburg, Nicolas and Hassan, Ahmed E and Adams, Bram and German, Daniel M},
+  title         = {Management of community contributions},
+  journal       = {Empirical Software Engineering},
+  year          = {2015},
+  volume        = {20},
+  number        = {1},
+  pages         = {252--289},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+  publisher     = {Springer},
+}
+
+@Article{Thongtanunam2016,
+  author        = {Thongtanunam, Patanamon and McIntosh, Shane and Hassan, Ahmed E and Iida, Hajimu},
+  title         = {Review participation in modern code review},
+  journal       = {Empirical Software Engineering},
+  year          = {2016},
+  pages         = {1--50},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+  publisher     = {Springer},
+}
+
+@InProceedings{Zhu2016,
+  author        = {Zhu, Jiaxin and Zhou, Minghui and Mockus, Audris},
+  title         = {Effectiveness of code contribution: from patch-based to pull-request-based tools},
+  booktitle     = {Proceedings of the 2016 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+  year          = {2016},
+  pages         = {871--882},
+  organization  = {ACM},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+}
+
+@Book{Bell2014,
+  title         = {Introducing GitHub: A non-technical guide},
+  publisher     = {" O'Reilly Media, Inc."},
+  year          = {2014},
+  author        = {Bell, Peter and Beer, Brent},
+  __markedentry = {[Daniel.Flynn.CTR:6]},
+}
+
+@TechReport{Peterson2013,
+  author        = {Peterson, Kevin},
+  title         = {The github open source development process},
+  institution   = {Technical report, Technical report, Mayo Clinic},
+  year          = {2013},
+  __markedentry = {[Daniel.Flynn.CTR:6]},
+}
+
+@Article{Longo2016,
+  author        = {Longo, Justin and Kelley, Tanya M},
+  title         = {GitHub use in public administration in Canada: Early experience with a new collaboration tool},
+  journal       = {Canadian Public Administration},
+  year          = {2016},
+  volume        = {59},
+  number        = {4},
+  pages         = {598--623},
+  __markedentry = {[Daniel.Flynn.CTR:6]},
+  publisher     = {Wiley Online Library},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

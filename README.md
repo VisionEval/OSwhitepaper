@@ -1,6 +1,8 @@
 # OSwhitepaper
 White paper on open source principles and practical applications for VisionEval 
 
+View the rendered [HTML version of the whitepaper here](http://htmlpreview.github.io/?https://github.com/VisionEval/OSwhitepaper/blob/master/VEwhitepaper.html)
+
 ## How to contribute comments or edits
 
 If you are logged in and a contributor to this repostory, you can add comments or edits to the white paper using the following methods:

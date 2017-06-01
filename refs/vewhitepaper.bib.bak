@@ -12,14 +12,13 @@
 }
 
 @Article{Heistermann2015,
-  author        = {Heistermann, Maik and Collis, S and Dixon, MJ and Giangrande, S and Helmus, JJ and Kelley, B and Koistinen, J and Michelson, DB and Peura, M and Pfaff, T and others},
-  title         = {The emergence of open-source software for the weather radar community},
-  journal       = {Bulletin of the American Meteorological Society},
-  year          = {2015},
-  volume        = {96},
-  number        = {1},
-  pages         = {117--128},
-  __markedentry = {[Daniel.Flynn.CTR:]},
+  author  = {Heistermann, Maik and Collis, S and Dixon, MJ and Giangrande, S and Helmus, JJ and Kelley, B and Koistinen, J and Michelson, DB and Peura, M and Pfaff, T and others},
+  title   = {The emergence of open-source software for the weather radar community},
+  journal = {Bulletin of the American Meteorological Society},
+  year    = {2015},
+  volume  = {96},
+  number  = {1},
+  pages   = {117--128},
 }
 
 @InProceedings{Zhu2014,
@@ -29,7 +28,7 @@
   year          = {2014},
   pages         = {30},
   organization  = {ACM},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
 }
 
 @Article{Aksulu2010,
@@ -40,7 +39,7 @@
   volume        = {11},
   number        = {11},
   pages         = {576},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
   publisher     = {Association for Information Systems},
 }
 
@@ -51,7 +50,7 @@
   year          = {2010},
   pages         = {1--9},
   organization  = {IEEE},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
 }
 
 @Article{VonKrogh2003,
@@ -62,7 +61,7 @@
   volume        = {44},
   number        = {3},
   pages         = {14},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
   publisher     = {Massachusetts Institute of Technology, Cambridge, MA},
 }
 
@@ -74,7 +73,7 @@
   volume        = {21},
   number        = {5},
   pages         = {2146--2189},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
   publisher     = {Springer},
 }
 
@@ -86,7 +85,7 @@
   volume        = {20},
   number        = {1},
   pages         = {252--289},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
   publisher     = {Springer},
 }
 
@@ -96,7 +95,7 @@
   journal       = {Empirical Software Engineering},
   year          = {2016},
   pages         = {1--50},
-  __markedentry = {[Daniel.Flynn.CTR:6]},
+  __markedentry = {[Daniel.Flynn.CTR:]},
   publisher     = {Springer},
 }
 
@@ -107,7 +106,35 @@
   year          = {2016},
   pages         = {871--882},
   organization  = {ACM},
+  __markedentry = {[Daniel.Flynn.CTR:]},
+}
+
+@Book{Bell2014,
+  title         = {Introducing GitHub: A non-technical guide},
+  publisher     = {" O'Reilly Media, Inc."},
+  year          = {2014},
+  author        = {Bell, Peter and Beer, Brent},
   __markedentry = {[Daniel.Flynn.CTR:6]},
+}
+
+@TechReport{Peterson2013,
+  author        = {Peterson, Kevin},
+  title         = {The github open source development process},
+  institution   = {Technical report, Technical report, Mayo Clinic},
+  year          = {2013},
+  __markedentry = {[Daniel.Flynn.CTR:6]},
+}
+
+@Article{Longo2016,
+  author        = {Longo, Justin and Kelley, Tanya M},
+  title         = {GitHub use in public administration in Canada: Early experience with a new collaboration tool},
+  journal       = {Canadian Public Administration},
+  year          = {2016},
+  volume        = {59},
+  number        = {4},
+  pages         = {598--623},
+  __markedentry = {[Daniel.Flynn.CTR:6]},
+  publisher     = {Wiley Online Library},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

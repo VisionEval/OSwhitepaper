@@ -105,44 +105,6 @@ Discuss the best practices for open source development; the role of the develope
 
 Typical `git` workflow involves a single master repository. Developers can fork that repository, make modifications, and then push those modifications back to the master. To have separate workspaces for some users (contractors) than others, one solution would be to have two git repositories.
 
-The process of copying from one repository to a second one, while preserving all the history, would be as follows:
-
-Using the [`git bash`](https://git-scm.com/) command line tool:
-
-1.	In top-level git directory, make a copy of existing repository using clone, and rename it 
-
-    `git clone github.com/username/originalrepo newrepo`
-
-2.	Go into that repository, delete the link to the original repository, and re-write each file to start new branch history using filter-branch. This needs to be done for each top-level subdirectory in the repository, where `foldername` refers to a given subdirectory.
-
-    `cd newrepo`
-    
-    `git remote rm origin`
-    
-    `git filter-branch -subdirectory-filter foldername -- --all`
-
-3.	Now make a new directory and place all those re-written files in the new directory. As above, `foldername` refers to the subdirectory name, and is the only variable which would change in this process. 
-
-    `mkdir foldername`
-    
-    `mv * foldername`
-    
-    `git add .`
-    
-    `git commit`
-
-    Add a commit message, hit `esc`, `:wq` to save and quit `vim`.
-
-4.	Push it to GitHub. Create the repository on GitHub first, then add this to the remote 
-
-    `git remote add origin https://github.com/username/newrepo`
-    
-    `git push -u origin master`
-
-5.	[Transfer this to another GitHub user](https://help.GitHub.com/articles/transferring-a-repository-owned-by-your-personal-account/
-)
-This sends an email to the proposed new repository owner, asking them to confirm it.
-
 
 ### Reviewing contributions from multiple sources
 
@@ -150,7 +112,13 @@ This sends an email to the proposed new repository owner, asking them to confirm
 -	Gatekeeping versus crowdsource 
 -	Merging branches, maintaining stable trunk
 
-Unlike proprietary software project, open source research projects distinguish between a developer and user community. Contributions from the user community may be rare, typically limited to testing and bug reporting [@Aksulu2010].
+Unlike proprietary software project, open source research projects distinguish between a developer and user community. Contributions from the user community may be rare, typically limited to testing and bug reporting [@Aksulu2010]. Software code review by team members, however, typically follows well-established practice, with careful testing of software products early in the development cycle [@Thongtanunam2016]. The most formal realization of this type of code review involves developers meeting and reviewing printed-out code, line by line. Such review is impractical for large open source projects.
+
+Instead, many open source software projects follow what has been dubbed Modern Code Review (MCR), and is often called a lightweight code review. This type of code review dominates in practice [@Beller2014].
+
+While identifying defects is a core goal of code review, modern code review now also seeks to transfer knowledge, increase awareness, and create of alternative solutions to problems as well [@McIntosh2016].
+
+GitHub and other online software repositories allow collaborative code review.
 
 ### Testing new contributions
 
@@ -167,7 +135,8 @@ Unlike proprietary software project, open source research projects distinguish b
 
 ## 4.	Git and GitHub  <a name = "git"></a>
 
-Discuss Git as a specific tool for version control and collaboration, to accomplish the workflow established above.
+Git is a distributed version control system. Git is *distributed* because every user has a complete copy of the repository. Git is a *version control system* in that it tracks the changes to files, allowing useful changes to be incorporated with attribution to the authors.
+
 
 -	Version control in Git
     +	Master branch

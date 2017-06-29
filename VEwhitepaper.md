@@ -38,16 +38,9 @@ Draft Objectives for discussion
 2)	 Ability to build on prior research with clear copyrights
 3)	 Enable collective action across sectors and participants while maintaining equal access
 --> 
+<!--Examples of successful open source projects (R, QGIS) -->
 
-*	Defining open source
-
-Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  
-
-*	Intellectual property
-    +	Maintenance of open access to research results for all parties through aggregated copyrights
-    +	Ability to build on prior research with clear copyrights
-*	Enable collective action across sectors and participants while maintaining equal access
-*	Examples of successful open source projects (R, QGIS)
+Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  In the public sector, open source approaches have become the common in agencies as diverse as the [Department of Defense](http://dodcio.defense.gov/Open-Source-Software-FAQ/), [NASA](https://github.com/nasa/open-source-catalog), and the [Consumer Financial Protection Bureau](http://cfpb.github.io/source-code-policy/). Governmental users and organizations on open source collaboration platforms have been growing [exponentially](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github), and the platform GitHub has established a site to facilitate the incorporation of open source principles to governmental software development [(government.github.com)](https://government.github.com/).
 
 The 'openness' of open source projects is protected by copyrights such as the General Public License (GPL). The original GPL license, developed in the 1980's by the Free Software Foundation [@VonKrogh2003] ensured that those the right to use, study, modify, and distribute modified or unmodified code at no cost was preserved. Licences are key to preserving open source development, allowing users to contribute code without concerns that the code will be locked in a proprietary software in the future.
 
@@ -68,6 +61,8 @@ The first three elements are common to all open source licenses. Attribution of 
 Patent protection is granted by some licenses, such as the Apache 2.0 license. This means that commercial ventures may contribute code to an open source project and still apply for a patent on that contributed code.  
 
 For a research project such as VisionEval, a permissive license such as the [MIT license](https://choosealicense.com/licenses/mit/) would balance the need for preservation of copyright and attribution of authorship while promoting widespread use. 
+
+
 
 ## 2.	Open source governance <a name = "opensourcegovernance"></a>
 

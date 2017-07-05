@@ -80,7 +80,7 @@ Achieving these benefits of open source tools requires a governance structure. T
 
 Common to both approaches, suggestions are reviewed by the community on to assure quality, determine fit of the contribution to the project, and sanitize code. If the code is considered a worthy addition to the project, the code will be accepted into the main project repository. This process is outlined in the figure below.
 
-![Content Review Process](https://github.com/VisionEval/OSwhitepaper/Bettenburg_Fig1.JPG "Conceptual model of the collaboration management process (Bettenburg et al. 2015).")
+![Conceptual model of the collaboration management process (Bettenburg et al. 2015).](https://raw.githubusercontent.com/VisionEval/OSwhitepaper/master/images/Bettenburg_Fig1.JPG "Content Review Process")
 
 The commercial Android software is developed by Google and distributed freely, with the core software developed by programmers supported by Google. Phone hardware manufactures can modify the Android software to tailor it to their devices, and users can submit modifications to be integrated into the core software. Contributers are required to agree to a Contributor License Agreement (CLA, see above) to transfer intellectual property rights to Google. This is a centralized project, with staff supported by Google to review code.
 

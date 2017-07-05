@@ -163,4 +163,15 @@
   __markedentry = {[Daniel.Flynn.CTR:]},
 }
 
+@Article{von2007open,
+  author    = {Von Krogh, Georg and Spaeth, Sebastian},
+  title     = {The open source software phenomenon: Characteristics that promote research},
+  journal   = {The Journal of Strategic Information Systems},
+  year      = {2007},
+  volume    = {16},
+  number    = {3},
+  pages     = {236--253},
+  publisher = {Elsevier},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

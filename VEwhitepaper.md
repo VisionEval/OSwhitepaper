@@ -10,9 +10,9 @@ bibliography: refs/vewhitepaper.bib
 
 This document outlines the proposed Best Practices whitepaper for the VisionEval project, regarding need for an open source approach to develop this collaborative research platform. 
 
-Open source development of software provides a platform for software users and developers to engage in continuous improvement in a collaborative network. Collaboration via open source software development aligns with goals of public agencies involved in transportation planning, with a need to support freely-available decisionmaking tools which can be continuously improved by the user community.
+Open source development provides a platform for users and developers to engage in continuous, collaborative improvement of software tools. Collaboration via open source software development aligns with goals of public agencies involved in transportation planning, with a need to support freely-available decisionmaking tools which can be continuously improved by the user community and widely disseminated to promote effective transportation planning.
 
-[VisionEval](https://github.com/gregorbj/VisionEval) provides a framework for building collaborative, disaggregate strategic planning models. These models are currently oriented towards providing easy-to use tools to visualize the impact of potential transportation policies, with the target audience being planners at state agencies and metropolitan planning organizations. The suite of modeling tools in the VisionEval framework includes the Regional Strategic Planning Model (RSPM), the Rapid Policy Assessment Tool (RPAT), and the Energy and Emissions Reduction Policy Analysis Tool ([EERPAT](https://www.planning.dot.gov/FHWA_tool/default.aspx)). 
+[VisionEval](https://github.com/gregorbj/VisionEval) is an open source framework for building collaborative, disaggregate strategic planning models for transportation planners. These models are currently oriented towards providing easy-to use tools to visualize the impact of potential transportation policies, with the target audience being planners at state agencies and metropolitan planning organizations. The suite of modeling tools in the VisionEval framework includes the Regional Strategic Planning Model (RSPM), the Rapid Policy Assessment Tool (RPAT), and the Energy and Emissions Reduction Policy Analysis Tool ([EERPAT](https://www.planning.dot.gov/FHWA_tool/default.aspx)). 
 
 This open-source framework is the result of collaborations among partner agencies, namely the Federal Highway Administration (FHWA) and the Oregon Department of Transportation (OregonDOT). The VisionEval framework aims to support a broad array of potential uses, and thus will require a plan for incorporating software contributed by the user and developer community to extend the current functionality beyond the current modules. 
 This paper provides an overview of best practices for open source software development for the VisionEval project. In particular, this paper outlines the process by which contributions will be evaluated and reviewed, and describes how version control and collaboration tools can be used to achieve this goal.
@@ -42,7 +42,7 @@ Draft Objectives for discussion
 
 Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  In the public sector, open source approaches have become the common in agencies as diverse as the [Department of Defense](http://dodcio.defense.gov/Open-Source-Software-FAQ/), [NASA](https://github.com/nasa/open-source-catalog), and the [Consumer Financial Protection Bureau](http://cfpb.github.io/source-code-policy/). 
 
-Governmental users and organizations on open source collaboration platforms have been growing [exponentially](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github), and the platform GitHub has established a site to facilitate the incorporation of open source principles to governmental software development [(government.github.com)](https://government.github.com/). For governmental organizations, major benefits of adopting these approaches to software development include the transparency, cost-effectiveness, and longevity of open source tools.  
+Governmental users and organizations on open source collaboration platforms have been growing [exponentially](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github), and the platform GitHub has established a site to facilitate the incorporation of open source principles to governmental software development [(government.github.com)](https://government.github.com/). For public agencies, major benefits of adopting these approaches to software development include the transparency, cost-effectiveness, and longevity of open source tools.  
 
 Transparency in open source development is achieved because code is readily available to the community of users. This promotes accountability and reproducibility of research projects, beyond what can be achieved even by peer-review of a journal article. Some researchers argue that the element of transparency also promotes innovation, as modules of code can be reviewed and built on, spurring rapid development of tools in as areas such as information systems [@von2007open] and weather station monitoring [@Heistermann2015]. 
 
@@ -74,16 +74,19 @@ An additional layer of licensing can be used to ensure that contributions to a p
 
 ## 2.	Open source governance <a name = "opensourcegovernance"></a>
 
--	Roles: Users, developers, administrators.
--	Resources ($) required, and how to obtain them
+<!--	Roles: Users, developers, administrators.	Resources ($) required, and how to obtain them -->
 
-The distinction between commercial software projects and non-profit software projects provides a useful comparison for evaluating governance mechanism. The Android and Linux operating systems are both open source, but differ in their management of contributions from the community [@Bettenburg2015]. 
+Achieving these benefits of open source tools requires a governance structure. There are multiple models of governance for open source projects. The distinction between commercial software projects and non-profit software projects provides a useful comparison for evaluating governance mechanism. The Android and Linux operating systems are both open source, and share an overall similar structure of how code is reviewed, with some crucial differences [@Bettenburg2015]. 
 
-The other distinction in governance structures is between centralized and decentralized projects. 
+Common to both approaches, suggestions are reviewed by the community on to assure quality, determine fit of the contribution to the project, and sanitize code. If the code is considered a worthy addition to the project, the code will be accepted into the main project repository. This process is outlined in the figure below.
 
-In a centralized open source governance structure, resources are dedicated to support a central gate-keeper.
+![Content Review Process](https://github.com/VisionEval/OSwhitepaper/Bettenburg_Fig1.JPG "Conceptual model of the collaboration management process (Bettenburg et al. 2015).")
 
-<!-- A decentralized -->
+The commercial Android software is developed by Google and distributed freely, with the core software developed by programmers supported by Google. Phone hardware manufactures can modify the Android software to tailor it to their devices, and users can submit modifications to be integrated into the core software. Contributers are required to agree to a Contributor License Agreement (CLA, see above) to transfer intellectual property rights to Google. This is a centralized project, with staff supported by Google to review code.
+
+For the non-commercial Linux operating system, no CLA is required for contributors. This large, decentralized project has many contributors and many reviewers, without a single review team. The difference between centralized and decentralized projects has been likened to the difference between a 'cathedral' and a 'bazaar' [@raymond1999cathedral]. The 'bazaar' style of Linux means that new ideas are constantly being shared and reviewed, far more than any one team could manage to review. Commercial software and smaller teams typically take more of a 'cathedral' style development process, where only core group of developer have the authorization to commit changes to the central repository. 
+
+<!--The centralized process-->
 
 
 ## 3.	Open source development   <a name = "opensourcedevelopment"></a>
@@ -105,7 +108,7 @@ http://stackoverflow.com/documentation/git/topics
 
 Open source development relies on a community of developers to produce, evaluate, and integrate code into a project. There are a number ways that development can be organized in an open source framework, but the most important features are ability to incorporate existing code from other projects, ability to develop features independently, and agreed-upon methods for developers to share their additions with the community of other developers and users.
 
-Incorporating code from other other projects is central to open source development. For example, the Vision California Urban Footprint project is an open-source scenario development and analysis tool for land use planning [(Hosted on GitHub)](https://github.com/CalthorpeAnalytics/urbanfootprint). This project drew from 12 distinct open source projects, including tools for database management, geospatial analysis, and data processing. The open source framework of this project has encouraged multiple users to adopt and modifiy the tool.  
+Incorporating code from other other projects is central to open source development. For example, the Vision California Urban Footprint project is an open-source scenario development and analysis tool for land use planning [(Hosted on GitHub)](https://github.com/CalthorpeAnalytics/urbanfootprint). This project drew from 12 distinct open source projects, including tools for database management, geospatial analysis, and data processing. The open source framework of this project has encouraged multiple users to adopt and modify the tool.  
 
 
 Ideally, developers contribute 

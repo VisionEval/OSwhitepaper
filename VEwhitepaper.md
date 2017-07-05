@@ -40,9 +40,17 @@ Draft Objectives for discussion
 --> 
 <!--Examples of successful open source projects (R, QGIS) -->
 
-Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  In the public sector, open source approaches have become the common in agencies as diverse as the [Department of Defense](http://dodcio.defense.gov/Open-Source-Software-FAQ/), [NASA](https://github.com/nasa/open-source-catalog), and the [Consumer Financial Protection Bureau](http://cfpb.github.io/source-code-policy/). Governmental users and organizations on open source collaboration platforms have been growing [exponentially](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github), and the platform GitHub has established a site to facilitate the incorporation of open source principles to governmental software development [(government.github.com)](https://government.github.com/).
+Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  In the public sector, open source approaches have become the common in agencies as diverse as the [Department of Defense](http://dodcio.defense.gov/Open-Source-Software-FAQ/), [NASA](https://github.com/nasa/open-source-catalog), and the [Consumer Financial Protection Bureau](http://cfpb.github.io/source-code-policy/). 
 
-The 'openness' of open source projects is protected by copyrights such as the General Public License (GPL). The original GPL license, developed in the 1980's by the Free Software Foundation [@VonKrogh2003] ensured that those the right to use, study, modify, and distribute modified or unmodified code at no cost was preserved. Licences are key to preserving open source development, allowing users to contribute code without concerns that the code will be locked in a proprietary software in the future.
+Governmental users and organizations on open source collaboration platforms have been growing [exponentially](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github), and the platform GitHub has established a site to facilitate the incorporation of open source principles to governmental software development [(government.github.com)](https://government.github.com/). For governmental organizations, major benefits of adopting these approaches to software development include the transparency, cost-effectiveness, and longevity of open source tools.  
+
+Transparency in open source development is achieved because code is readily available to the community of users. This promotes accountability and reproducibility of research projects, beyond what can be achieved even by peer-review of a journal article. Some researchers argue that the element of transparency also promotes innovation, as modules of code can be reviewed and built on, spurring rapid development of tools in as areas such as information systems [@von2007open] and weather station monitoring [@Heistermann2015]. 
+
+Cost-effectiveness comes from the ability to build on common tools. For example, the software [QGIS](http://www.qgis.org/en/site/) is an open source geospatial modeling and visualization tool, and builds on a large number of modules written in the programming language Python. Users can add modules for their own specific needs, and an active community of users discusses these suggested modifications and decides how to incorporate them into the project. Such cost-effectiveness means that the software tool is free and constantly improving. The free availability of this spatial analysis tool has made QGIS popular, for instance, with water resource managers in developing countries [@chen2010assessment]. 
+
+Longevity arises from the fact that the code is developed in a community effort. As it is not tied to a single individual, the code can continue to be maintained and supported by the community. Provided the community exceeds a certain size, the project can be resilient to changes in the involvement of individual developers [@Heistermann2015]. For public agencies, this longevity avoids lock-in with a single vendor [@zhu2012research].
+
+A crucial factor underpinning these benefits is the licensing that protects open source software. The 'openness' of open source projects does not mean that they have no license; open source software is protected by copyrights such as the General Public License (GPL). The original GPL license, developed in the 1980's by the Free Software Foundation [@VonKrogh2003] ensured that those the right to use, study, modify, and distribute modified or unmodified code at no cost was preserved. Licences are key to preserving open source development, allowing users to contribute code without concerns that the code will be locked in a proprietary software in the future. 
 
 Software licenses can be chosen to reflect the needs of the project, using tools such as https://choosealicense.com/. The key elements of an open source license include the the following:
 
@@ -62,7 +70,7 @@ Patent protection is granted by some licenses, such as the Apache 2.0 license. T
 
 For a research project such as VisionEval, a permissive license such as the [MIT license](https://choosealicense.com/licenses/mit/) would balance the need for preservation of copyright and attribution of authorship while promoting widespread use. 
 
-
+An additional layer of licensing can be used to ensure that contributions to a project fall within the license of the project. Contributor License Agreements ([CLAs](https://www.clahub.com/pages/why_cla)) ensure that when a project accepts contributions from a third party, all necessary copyrights to release the code are in place. A CLA can provide extra assurance the governing organization of a project has all the appropriate permissions to incorporate patches or improvements to the project, and distribute the resulting work. A CLA may be unnecessary for open source project where concerns about patent or copyright infringement are minimal, and is mostly useful when a for-profit company submits patented code to an open-source project. For a project such as VisionEval, a CLA likely is not essential.    
 
 ## 2.	Open source governance <a name = "opensourcegovernance"></a>
 
@@ -97,10 +105,14 @@ http://stackoverflow.com/documentation/git/topics
 
 Open source development relies on a community of developers to produce, evaluate, and integrate code into a project. There are a number ways that development can be organized in an open source framework, but the most important features are ability to incorporate existing code from other projects, ability to develop features independently, and agreed-upon methods for developers to share their additions with the community of other developers and users.
 
-Incorporating code from other other projects is central to open source development. For example, the Vision California Urban Footprint project is an open-source scenario development and analysis tool for land use planning [(Hosted on GitHub)](https://github.com/CalthorpeAnalytics/urbanfootprint). This project drew from 12 distinct open source projects, including tools for database management, geospatial analysis, and data processing. The open source framework of this project has encouraged multiple users to 
+Incorporating code from other other projects is central to open source development. For example, the Vision California Urban Footprint project is an open-source scenario development and analysis tool for land use planning [(Hosted on GitHub)](https://github.com/CalthorpeAnalytics/urbanfootprint). This project drew from 12 distinct open source projects, including tools for database management, geospatial analysis, and data processing. The open source framework of this project has encouraged multiple users to adopt and modifiy the tool.  
 
 
-best practices for open source development; the role of the developers in contributing additions and patches; best practices for reviewing code and maintaining working code base; testing code under new scenarios; documenting and updating. 
+Ideally, developers contribute 
+
+Reviewing code and maintaining working code base
+Testing code under new scenarios
+Documenting and updating. 
 
 As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: (GreenSTEP, RPAT, RSPM, and EERPAT.
 
@@ -119,7 +131,6 @@ The essential steps are as follows:
 -	Add Code - preparing for new version of RPAT
 -	Add features, remove bugs
 -	Document and release
-
 
 ### Reviewing contributions from multiple sources
 

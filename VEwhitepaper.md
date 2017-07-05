@@ -82,7 +82,7 @@ Common to both approaches, suggestions are reviewed by the community on to assur
 
 ![Conceptual model of the collaboration management process (Bettenburg et al. 2015).](https://raw.githubusercontent.com/VisionEval/OSwhitepaper/master/images/Bettenburg_Fig1.JPG "Content Review Process")
 
-The commercial Android software is developed by Google and distributed freely, with the core software developed by programmers supported by Google. Phone hardware manufactures can modify the Android software to tailor it to their devices, and users can submit modifications to be integrated into the core software. Contributers are required to agree to a Contributor License Agreement (CLA, see above) to transfer intellectual property rights to Google. This is a centralized project, with staff supported by Google to review code.
+The commercial Android software is developed by Google and distributed freely, with the core software developed by programmers supported by Google. Phone hardware manufactures can modify the Android software to tailor it to their devices, and users can submit modifications to be integrated into the core software. Contributors are required to agree to a Contributor License Agreement (CLA, see above) to transfer intellectual property rights to Google. This is a centralized project, with staff supported by Google to review code.
 
 For the non-commercial Linux operating system, no CLA is required for contributors. This large, decentralized project has many contributors and many reviewers, without a single review team. The difference between centralized and decentralized projects has been likened to the difference between a 'cathedral' and a 'bazaar' [@raymond1999cathedral]. The 'bazaar' style of Linux means that new ideas are constantly being shared and reviewed, far more than any one team could manage to review. Commercial software and smaller teams typically take more of a 'cathedral' style development process, where only core group of developer have the authorization to commit changes to the central repository. 
 
@@ -111,13 +111,15 @@ Open source development relies on a community of developers to produce, evaluate
 Incorporating code from other other projects is central to open source development. For example, the Vision California Urban Footprint project is an open-source scenario development and analysis tool for land use planning [(Hosted on GitHub)](https://github.com/CalthorpeAnalytics/urbanfootprint). This project drew from 12 distinct open source projects, including tools for database management, geospatial analysis, and data processing. The open source framework of this project has encouraged multiple users to adopt and modify the tool.  
 
 
-Ideally, developers contribute 
+<!--
+Ideally, developers contribute to
 
 Reviewing code and maintaining working code base
 Testing code under new scenarios
 Documenting and updating. 
+-->
 
-As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: (GreenSTEP, RPAT, RSPM, and EERPAT.
+As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: GreenSTEP, RPAT, RSPM, and EERPAT.
 
 <!-- Open source projects build on ... -->
 
@@ -151,6 +153,8 @@ GitHub (see below) and other online software repositories allow collaborative co
 
 
 ### Testing new contributions
+
+<!-- elasticity --> 
 
 -	Scenario testing
 -	Model data sets

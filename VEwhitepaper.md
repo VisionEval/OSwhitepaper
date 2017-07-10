@@ -121,9 +121,31 @@ Documenting and updating.
 
 As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: GreenSTEP, RPAT, RSPM, and EERPAT.
 
-<!-- Open source projects build on ... -->
-
+<!-- Open source projects build on existing work, see Urban Foot print above -->
+<!-- Another large open source effort is the 
 <!-- to incorporate previous work on modules such as RPAT, update that module, and release a new version. -->
+
+#### Example large project: `Node.js`
+For a large open source project, extensive community engagement and a clear governance structure is essential. Node.js is a JavaScript tool for event-driven web programming. The community is organized in to Users, Collaborators, and Leaders. The number of users is vast, at least in the tens of thousands. The number of contributors is . At the leadership level, there is a Core Technical Committee (CTC) of approximately 20 members. Additional Working Groups exist for to manage security, specific technical issues, and releases. 
+
+Users can most easily become involved in this coding effort by contributing issues on the project GitHub page, where over 5,000 issues have been submitted by users. If users decide to contribute a new feature or propose a bug fix, they can open a pull request. Over 8,000 pull requests have been opened for Node.js, with some receiving comments from over 100 users or Collaborators. An extensive documentation of [development guidelines](https://nodejs.org/en/get-involved/development/) exists. These guidelines specifies, among other issues, that contributors state a "Certificate of Origin" which acts similarly to a CLA to ensure that contributions will remain public and under the license of the project itself.
+
+Users become Collaborators by being identified by the CTC as someone who has made [signfificant and valuable contributions](https://github.com/nodejs/node/blob/master/GOVERNANCE.md) to the project. Collaborators are involved in reviewing contributions of code, help other collaborators, and have commit rights to merge pull requests. The Core Technical Committee has oversight of the activities of the collaborators. 
+
+The CTC membership is handed out by existing CTC members, at one of the weekly meetings that occurs. A unique feature of the Node.js governance is that no more than 1/3 of the CTC members may be affiliated with the same employer. Decisions are made by ["Consensus Seeking"](https://en.wikipedia.org/wiki/Consensus-seeking_decision-making) process, whereby if the CTC cannot come to consensus on an issue, it can either be tabled or put forward for a vote by simple majority.
+
+Community engagement is extensive, with a web chat channel, Twitter account, weekly newsletter, podcast, and many web resources. User groups exist in many languages, and documentation in many forms exist. These community engagement efforts are key to helping new users learn about the tool and become proficient. While VisionEval will not likely reach the same scale of adoption, the clear structure used by this mature open source project provides a model to examine while considering a governance structure.
+
+#### Example small project: `vegan`
+`vegan` is a popular package of R tools for ecologists, with a focus on analysis of vegetation data. There are on average 800 weekly downloads of the package, and thousands of users. The package was developed originally by a single academic researcher, and now has 16 active contributors, and has been forked over 30 times. With vastly smaller scale than Node.js, this community of developers has not developed any formal governance structure, apparently relying on informal email communication between developers to coordinate pull requests. 
+
+Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license. Other than the license, there is a lack of any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
+
+While this structure clearly works for a tool with an active academic group of users, VisionEval should strive to establish a clear governance structure which lays out roles and responsibilities of users, contributors, and leadership.
+
+
+<!-- #### Example transportation planning project: `ActivitySim` -->
+
 
 
 ### Workflow for VisionEval
@@ -150,6 +172,8 @@ Instead, many open source software projects follow what has been dubbed Modern C
 While identifying defects is a core goal of code review, modern code review now also seeks to transfer knowledge, increase awareness, and create of alternative solutions to problems as well [@McIntosh2016].
 
 GitHub (see below) and other online software repositories allow collaborative code review.
+
+For scientific research, code review has been proposed to be become an important feature of the peer-review process, to the extent that some authors propose that all source code for statistical analyses must be open during peer review [@Shamir:2013aa].
 
 
 ### Testing new contributions

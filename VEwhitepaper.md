@@ -22,7 +22,7 @@ This paper provides an overview of best practices for open source software devel
 2. [Open Source Governance](#opensourcegovernance)
 3. [Open Source Development](#opensourcedevelopment)
 4. [Git and GitHub](#git)
-4. [Summary](#summary)
+5. [Summary](#summary)
 
 ## 1.	Introduction 
 
@@ -150,7 +150,6 @@ Testing code under new scenarios
 Documenting and updating. 
 -->
 
-
 ### Workflow for VisionEval
 
 Contributions to the VisionEval project ideally should follow the typical `git` work flow, using the GitHub web interface as described in detail below. In summary, the `git` workflow involves creation of a repository (folder of files) of the working version of the code, which is distributed across all the developers. The distributed nature of the repository means that developers can independently make modifications and additions to the code, and then request that this code be incorporated into the main version to be shared with all users. The details of this work flow will be established by the Contributor Review Team, and are outlined here as a starting point.
@@ -200,14 +199,6 @@ elasticity
 -	Compare output to prior model versions
 -->
 
-### Documenting and Updating
-
-
--	Project background and user guides
--   Moving from beta to release versions
--	Documenting changes in release versions
--	Continuous work on development versions
-
 ## 4.	Git and GitHub  <a name = "git"></a>
 
 ### Git
@@ -254,15 +245,28 @@ For projects such as VisionEval which will likely have a small number of special
 
 In addition to online discussions, periodic announcements by email can be useful. Such announcements may be on at regular periods, or following releases of major updates or new modules. Maintaining a list of interested users would require some investment of effort for the centralized governing organization. Large open source projects with many active users do not typically have email announcements, but for VisionEval such announcements could be useful for engaging the community of users who are not developers. 
 
-
 <!-- general SO example: https://gis.stackexchange.com/questions/68349/are-there-open-source-solutions-for-travel-demand-modelling -->
 <!-- Disqus forum for GitHub pages: http://klcodanr.github.io/Jekyll-Disqus-Forum/ -->
 
 ## 5.	Summary  <a name = "summary"></a>
-
--	Summarize best practices
+<!-- 
+- Summarize best practices
 -	Recommend practices and tools for the VisionEval team.
 -	Next steps
+--> 
 
+As an ongoing open source development effort, VisionEval has already implemented the key best practices, namely developing the software in an open, public fashion with documentation of the contributions being made. Making VisionEval a vibrant community of users and developers will require a few additional steps. These will be:
+
+- Agree on a license which meets the needs of the VisionEval charter. The VisionEval team should consider as permissive a license as possible, so that the public may benefit from these strategic planning tools. Patent protection and the need to have releases from individual developers (CLAs) should be considered. 
+
+- Develop a governance structure which establishes the roles and responsibilities of users, developers, and collaborators/committers, as well as an oversight body composed of funders. Following the ActivitySim structure would appear to be a useful way forward.
+
+- Develop a code review process which is clear and fair, to maximize contributions from the community. This will be likely done on GitHub, using a pull request model to merge new features into the development branch, with periodic merges into the master branch when warranted to release a new version. 
+
+- Clearly document the software tools, to grow the community of users and developers. Guidance for developers should be a priority, including conventions about how to comment code and how new functions will interact with existing functions. A project wiki on GitHub (or one for each of the VisionEval models) would be recommended. Mailing lists for users and developers may not be necessary at first, as the issues page on GitHub can serve most of the needs for communicating. A project webpage (https://pages.github.com/) may be useful, to provide a simple interface for non-developer users. 
+
+- Release stable versions periodically, maintaining active development branches for new features. Releases can be announced by email if an email list is developed, or simply announced on the GitHub page.
+
+Taking these steps will help grow the community of users and developers to collaboratively develop the VisionEval strategic planning tools. 
 
 # References

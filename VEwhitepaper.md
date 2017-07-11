@@ -68,7 +68,7 @@ The first three elements are common to all open source licenses. Attribution of 
 
 Patent protection is granted by some licenses, such as the Apache 2.0 license. This means that commercial ventures may contribute code to an open source project and still apply for a patent on that contributed code.  
 
-For a research project such as VisionEval, a permissive license such as the [MIT license](https://choosealicense.com/licenses/mit/) would balance the need for preservation of copyright and attribution of authorship while promoting widespread use. 
+For a research project such as VisionEval, a permissive license such as the [MIT license](https://choosealicense.com/licenses/mit/) or [Apache 2.0 license](https://choosealicense.com/licenses/apache-2.0/) would balance the need for preservation of copyright and attribution of authorship while promoting widespread use. The former is more permissive, while the latter adds grant of patent rights, and adds the requirement that changes to the code must be stated. 
 
 An additional layer of licensing can be used to ensure that contributions to a project fall within the license of the project. Contributor License Agreements ([CLAs](https://www.clahub.com/pages/why_cla)) ensure that when a project accepts contributions from a third party, all necessary copyrights to release the code are in place. A CLA can provide extra assurance the governing organization of a project has all the appropriate permissions to incorporate patches or improvements to the project, and distribute the resulting work. A CLA may be unnecessary for open source project where concerns about patent or copyright infringement are minimal, and is mostly useful when a for-profit company submits patented code to an open-source project. For a project such as VisionEval, a CLA likely is not essential.    
 
@@ -78,15 +78,49 @@ An additional layer of licensing can be used to ensure that contributions to a p
 
 Achieving these benefits of open source tools requires a governance structure. There are multiple models of governance for open source projects. The distinction between commercial software projects and non-profit software projects provides a useful comparison for evaluating governance mechanism. The Android and Linux operating systems are both open source, and share an overall similar structure of how code is reviewed, with some crucial differences [@Bettenburg2015]. 
 
-Common to both approaches, suggestions are reviewed by the community on to assure quality, determine fit of the contribution to the project, and sanitize code. If the code is considered a worthy addition to the project, the code will be accepted into the main project repository. This process is outlined in the figure below.
+Common to both approaches, suggestions are reviewed by the community on to assure quality, determine fit of the contribution to the project, and sanitize code. If the code is considered a worthy addition to the project, the code will be accepted into the main project repository. This process is explained in detail in the Open Source Development section, and is outlined in the figure below.
 
 ![Conceptual model of the collaboration management process (Bettenburg et al. 2015).](https://raw.githubusercontent.com/VisionEval/OSwhitepaper/master/images/Bettenburg_Fig1.JPG "Content Review Process")
 
-The commercial Android software is developed by Google and distributed freely, with the core software developed by programmers supported by Google. Phone hardware manufactures can modify the Android software to tailor it to their devices, and users can submit modifications to be integrated into the core software. Contributors are required to agree to a Contributor License Agreement (CLA, see above) to transfer intellectual property rights to Google. This is a centralized project, with staff supported by Google to review code.
+For both commercial and non-commercial open source projects, this same work flow is followed, with the distinction being the identity of the contributors and degree to which outside contributions are accepted into the code base.
+
+The commercial Android software is developed by Google and distributed freely, with the core software developed by programmers supported by Google. Phone hardware manufactures can modify the Android software to tailor it to their devices, and users can submit modifications to be integrated into the core software, acting as Contributors in the process above. Contributors are required to agree to a Contributor License Agreement (CLA, see above) to transfer intellectual property rights to Google. This is a centralized project, with staff supported by Google to review code, who act to implement the Review, Verification, and Integration steps.
 
 For the non-commercial Linux operating system, no CLA is required for contributors. This large, decentralized project has many contributors and many reviewers, without a single review team. The difference between centralized and decentralized projects has been likened to the difference between a 'cathedral' and a 'bazaar' [@raymond1999cathedral]. The 'bazaar' style of Linux means that new ideas are constantly being shared and reviewed, far more than any one team could manage to review. Commercial software and smaller teams typically take more of a 'cathedral' style development process, where only core group of developer have the authorization to commit changes to the central repository. 
 
-<!--The centralized process-->
+Further examples of governance structures for code review follow below. These examples highlight the differences between large projects where many modules are being developed in an experimental fashion, with bazaar-style exchange of ideas and multiple versions, versus smaller projects curated in a cathedral-style fashion. For VisionEval, maintaining a balance between 'cathedral' and 'bazaar' style development will be essential to encourage users to be active in experimenting with new modules, while maintaining a functional and stable code base.
+
+#### Example large project: `Node.js`
+
+For a large open source project, extensive community engagement and a clear governance structure is essential. Node.js is a JavaScript tool for event-driven web programming. The community is organized in to Users, Collaborators, and Leaders. The number of users is vast, at least in the tens of thousands. At the leadership level, there is a Core Technical Committee (CTC) of approximately 20 members. Additional Working Groups exist for to manage security, specific technical issues, and releases. 
+
+Users can most easily become involved in this coding effort by contributing issues on the project GitHub page, where over 5,000 issues have been submitted. If users decide to contribute a new feature or propose a bug fix, they can open a pull request. Over 8,000 pull requests have been opened for Node.js, with some receiving comments from over 100 users or Collaborators. An extensive documentation of [development guidelines](https://nodejs.org/en/get-involved/development/) exists. These guidelines specifies, among other issues, that contributors state a "Certificate of Origin" which acts similarly to a CLA to ensure that contributions will remain public and under the license of the project itself.
+
+Users become Collaborators by being identified by the CTC as someone who has made [signfificant and valuable contributions](https://github.com/nodejs/node/blob/master/GOVERNANCE.md) to the project. Collaborators are involved in reviewing contributions of code, help other collaborators, and have commit rights to merge pull requests. The Core Technical Committee has oversight of the activities of the collaborators. 
+
+The CTC membership is handed out by existing CTC members, at one of the weekly meetings that occurs. A unique feature of the Node.js governance is that no more than 1/3 of the CTC members may be affiliated with the same employer. Decisions are made by ["Consensus Seeking"](https://en.wikipedia.org/wiki/Consensus-seeking_decision-making) process, whereby if the CTC cannot come to consensus on an issue, it can either be tabled or put forward for a vote by simple majority.
+
+Community engagement is extensive, with a web chat channel, Twitter account, weekly newsletter, podcast, and many web resources. User groups exist in many languages, and documentation in many forms exist. These community engagement efforts are key to helping new users learn about the tool and become proficient. While VisionEval will not likely reach the same scale of adoption, the clear structure used by this mature open source project provides a model to examine while considering a governance structure.
+
+#### Example small project: `vegan`
+
+`vegan` is a popular package of R tools for ecologists, with a focus on analysis of vegetation data. There are on average 800 weekly downloads of the package, and thousands of users. The package was developed originally by a single academic researcher, and now has 16 active contributors, and has been forked over 30 times. With vastly smaller scale than Node.js, this community of developers has not developed any formal governance structure, apparently relying on informal email communication between developers to coordinate pull requests. 
+
+Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license. Other than the license, there is a lack of any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
+
+While this structure clearly works for a tool with an active academic group of users, VisionEval should strive to establish a clear governance structure which lays out roles and responsibilities of users, contributors, and leadership.
+
+#### Example travel model project: `ActivitySim`
+
+ActivitySim provides a platform for activity-based travel modeling. Like Node.js, ActivitySim has a clearly defined governance structure and development workflow. ActivitySim uses GitHub (see below) to manage the workflow, with a stable version hosted on the master branch, and improvements submitted via pull requests. The governance structure differs from Node.js and similar initiatives because the effort is funded by an association of Municipal Planning Organizations (MPOs). Thus the [governance structure](https://github.com/UDST/activitysim/wiki/Governance) is as follows:
+
+- **Users** uses the modeling tool; users may submit issues to notify developers about bugs or request features.
+- **Developers** contribute code or documentation, and act in the "Contributor" role in the figure above.
+- **Committers** can accept code from developers, and have signed a CLA. Committers apparently act in all three of the Review, Verification, and Integration steps in the figure. Committers are apparently designated by the Project Management Committee. 
+- **Funders** provide funding to support the development of the code and project administration, and may not be involved in the day-to-day of the project.
+- **Project Mangagement Committee** (PMC) members serve multiple roles. The PMC is composed of funders initially, and can include developers or committers in the future. As a group, the PMC provides oversight to the whole project. There is a PMC contractor, who acts as the lead organization to carry out the software development and administration, and is likely is the most active component of the Developer and Committer groups.
+
+ActivitySim provides a useful model for VisionEval. Important decisions will include what the composition of the PMC or similar oversight group will be, what decision-making framework the PMC will follow, and how Committers and Developers will be designated. 
 
 
 ## 3.	Open source development   <a name = "opensourcedevelopment"></a>
@@ -97,94 +131,77 @@ We will need to accomplish in the initial phase
 2)	 Host the prior versions of RPAT
 3)	 Release a new major version
 4)	 Make at least one maintenance release
-
 5)	 Define a relationship or uptake the ODOT sponsored work
 
 Let's use these tasks to test initial procedures and repository organizations, with input from ODOT on TLUMIP. 
-
-Lean on:
-http://stackoverflow.com/documentation/git/topics
--->
+Lean on: http://stackoverflow.com/documentation/git/topics -->
 
 Open source development relies on a community of developers to produce, evaluate, and integrate code into a project. There are a number ways that development can be organized in an open source framework, but the most important features are ability to incorporate existing code from other projects, ability to develop features independently, and agreed-upon methods for developers to share their additions with the community of other developers and users.
 
 Incorporating code from other other projects is central to open source development. For example, the Vision California Urban Footprint project is an open-source scenario development and analysis tool for land use planning [(Hosted on GitHub)](https://github.com/CalthorpeAnalytics/urbanfootprint). This project drew from 12 distinct open source projects, including tools for database management, geospatial analysis, and data processing. The open source framework of this project has encouraged multiple users to adopt and modify the tool.  
 
+As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: GreenSTEP, RPAT, RSPM, and EERPAT. The latter three build on the R functions of GreenSTEP, with emphases varying in scale (regional to state-level) and process of interest (land use, greenhouse gas emissions, transportation policies). As a group of free and open source tools, these tools share features and may benefit mutually from improvements in one particular model.
 
-<!--
-Ideally, developers contribute to
-
+<!-- Open source projects build on existing work, see Urban Foot print above -->
+<!-- to incorporate previous work on modules such as RPAT, update that module, and release a new version. -->
+<!-- Ideally, developers contribute to
 Reviewing code and maintaining working code base
 Testing code under new scenarios
 Documenting and updating. 
 -->
 
-As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: GreenSTEP, RPAT, RSPM, and EERPAT.
-
-<!-- Open source projects build on existing work, see Urban Foot print above -->
-<!-- Another large open source effort is the 
-<!-- to incorporate previous work on modules such as RPAT, update that module, and release a new version. -->
-
-#### Example large project: `Node.js`
-For a large open source project, extensive community engagement and a clear governance structure is essential. Node.js is a JavaScript tool for event-driven web programming. The community is organized in to Users, Collaborators, and Leaders. The number of users is vast, at least in the tens of thousands. The number of contributors is . At the leadership level, there is a Core Technical Committee (CTC) of approximately 20 members. Additional Working Groups exist for to manage security, specific technical issues, and releases. 
-
-Users can most easily become involved in this coding effort by contributing issues on the project GitHub page, where over 5,000 issues have been submitted by users. If users decide to contribute a new feature or propose a bug fix, they can open a pull request. Over 8,000 pull requests have been opened for Node.js, with some receiving comments from over 100 users or Collaborators. An extensive documentation of [development guidelines](https://nodejs.org/en/get-involved/development/) exists. These guidelines specifies, among other issues, that contributors state a "Certificate of Origin" which acts similarly to a CLA to ensure that contributions will remain public and under the license of the project itself.
-
-Users become Collaborators by being identified by the CTC as someone who has made [signfificant and valuable contributions](https://github.com/nodejs/node/blob/master/GOVERNANCE.md) to the project. Collaborators are involved in reviewing contributions of code, help other collaborators, and have commit rights to merge pull requests. The Core Technical Committee has oversight of the activities of the collaborators. 
-
-The CTC membership is handed out by existing CTC members, at one of the weekly meetings that occurs. A unique feature of the Node.js governance is that no more than 1/3 of the CTC members may be affiliated with the same employer. Decisions are made by ["Consensus Seeking"](https://en.wikipedia.org/wiki/Consensus-seeking_decision-making) process, whereby if the CTC cannot come to consensus on an issue, it can either be tabled or put forward for a vote by simple majority.
-
-Community engagement is extensive, with a web chat channel, Twitter account, weekly newsletter, podcast, and many web resources. User groups exist in many languages, and documentation in many forms exist. These community engagement efforts are key to helping new users learn about the tool and become proficient. While VisionEval will not likely reach the same scale of adoption, the clear structure used by this mature open source project provides a model to examine while considering a governance structure.
-
-#### Example small project: `vegan`
-`vegan` is a popular package of R tools for ecologists, with a focus on analysis of vegetation data. There are on average 800 weekly downloads of the package, and thousands of users. The package was developed originally by a single academic researcher, and now has 16 active contributors, and has been forked over 30 times. With vastly smaller scale than Node.js, this community of developers has not developed any formal governance structure, apparently relying on informal email communication between developers to coordinate pull requests. 
-
-Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license. Other than the license, there is a lack of any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
-
-While this structure clearly works for a tool with an active academic group of users, VisionEval should strive to establish a clear governance structure which lays out roles and responsibilities of users, contributors, and leadership.
-
-
-<!-- #### Example transportation planning project: `ActivitySim` -->
-
-
 
 ### Workflow for VisionEval
 
-
-Contributions to the VisionEval project ideally should follow the typical `git` work flow, using the GitHub web interface as described in detail below. In summary, the `git` workflow involves creation of a repository (folder of files) of the working version of the code, which is distributed across all the developers. The distributed nature of the repository means that developers can independently make modifications and additions to the code, and then request that this code be incorporated into the main version to be shared with all users.
+Contributions to the VisionEval project ideally should follow the typical `git` work flow, using the GitHub web interface as described in detail below. In summary, the `git` workflow involves creation of a repository (folder of files) of the working version of the code, which is distributed across all the developers. The distributed nature of the repository means that developers can independently make modifications and additions to the code, and then request that this code be incorporated into the main version to be shared with all users. The details of this work flow will be established by the Contributor Review Team, and are outlined here as a starting point.
 
 The essential steps are as follows:
--	Establish repository - include RPAT work under AASHTO, previous versions of RPAT
--	Add Code - preparing for new version of RPAT
--	Add features, remove bugs
+
+-	Establish repository 
+-	Add code 
 -	Document and release
+
+The initial repository establishment will build off of the RPAT model. This can be done in several methods, one of which is outlined in the [Appendix](http://htmlpreview.github.io/?https://github.com/VisionEval/OSwhitepaper/blob/master/VEwhitepaper_Appendix.html). This would allow uptake of the previous RPAT model. This would be the version 1.0 release (or other version number), and would become the new master branch. Following the typical GitHub workflow (see [here](https://guides.github.com/introduction/flow/) and below), developers would then add code as necessary to resolve bugs and extend the model with additional features. Contributions from the community would be reviewed and accepted if useful, see below. Documentation of the software tool, essential to grow the community of users, would then be completed, and a new stable version would be released after passing integration tests using tools such as [Travis-CI](https://travis-ci.org/). Keeping the master branch as a stable release is ideal, with continuous development happening on other branches.
+
+This model is illustrated below, showing how releases are made from the master branch, while development occurs on other branches. Image from [nicoespeon.com](http://www.nicoespeon.com/en/2013/08/which-git-workflow-for-my-project/).
+
+![Model workflow for open source development, from nicoespeon.com.](https://raw.githubusercontent.com/VisionEval/OSwhitepaper/master/images/git-flow-branching-model.jpg "Open source development workflow")
+
 
 ### Reviewing contributions from multiple sources
 
+<!--
 -	Role of the community of users
 -	Gatekeeping versus crowdsource 
 -	Merging branches, maintaining stable trunk
+-->
 
 Unlike proprietary software project, open source research projects distinguish between a developer and user community. Contributions from the user community may be rare, typically limited to testing and bug reporting [@Aksulu2010]. Software code review by team members, however, typically follows well-established practice, with careful testing of software products early in the development cycle [@Thongtanunam2016]. The most formal realization of this type of code review involves developers meeting and reviewing printed-out code, line by line. Such review is impractical for large open source projects.
 
-Instead, many open source software projects follow what has been dubbed Modern Code Review (MCR), and is often called a lightweight code review. This type of code review dominates in practice [@Beller2014].
+Instead, many open source software projects follow what has been dubbed Modern Code Review (MCR), and is often called a lightweight code review. This type of code review dominates in practice [@Beller2014]. While identifying defects is a core goal of code review, modern code review now also seeks to transfer knowledge, increase awareness, and create of alternative solutions to problems as well [@McIntosh2016]. For scientific research, code review has been proposed to be become an important feature of the peer-review process, to the extent that some authors propose that all source code for statistical analyses must be open during peer review [@Shamir:2013aa].
 
-While identifying defects is a core goal of code review, modern code review now also seeks to transfer knowledge, increase awareness, and create of alternative solutions to problems as well [@McIntosh2016].
+GitHub (see below) and other online software repositories allow collaborative code review. The examples illustrated above (Node.js, vegan, and ActivitySim) all feature some way of evaluating code from the community of developers. The key elements of code review are identifying the community members who will carry out the review, having clear standards for what merits useful code to accept, and having a open record of what features are currently desired or being developed.
 
-GitHub (see below) and other online software repositories allow collaborative code review.
+Identifying the members to carry out the code review is crucial. For projects with clear governance, this should be straightforward, as they will be identified already as Collaborators (Node.js) or  Committers (AcivitySim). For VisionEval, this may be the Contributor Review Team or another set of users they designate.
 
-For scientific research, code review has been proposed to be become an important feature of the peer-review process, to the extent that some authors propose that all source code for statistical analyses must be open during peer review [@Shamir:2013aa].
+However the reviewers are designated, there should be clear standards for what code will be accepted. A bare minimum standard is that new features or modules should not break the master; this can be accomplished by automating code testing with tools such as [Travis-CI](https://travis-ci.org/). Beyond this minimum test, ideally there will be a guide for developers to give them best practices. For example, the astronomy and astrophysics modeling package AstroPy provides an extensive [guide for developers here](http://docs.astropy.org/en/latest/development/workflow/development_workflow.html). This guide covers stylistic issues of coding as well as details for how to test code and initiate pull requests on GitHub. 
 
+Finally, there will be a list of features which are desired for a project, perhaps with specific features deemed necessary for the next release. AstroPy maintains a formalized list of Proposals for Enhancements on their [wiki](https://github.com/astropy/astropy/wiki/Astropy-Proposals-for-Enhancements), and smaller scale list of features to address for specific releases are maintained on the (issues page](https://github.com/astropy/astropy/milestone/49). Having these clear markers for what is desired will minimize duplicate efforts and motivate developers to contribute.
 
+VisionEval should develop a clear work flow for code review, by following these practices of designating a code review team, standards for code, and list of desired features to solicit contributions.
+
+<!-- 
 ### Testing new contributions
 
-<!-- elasticity --> 
+elasticity  
 
 -	Scenario testing
 -	Model data sets
 -	Compare output to prior model versions
+-->
 
 ### Documenting and Updating
+
 
 -	Project background and user guides
 -   Moving from beta to release versions

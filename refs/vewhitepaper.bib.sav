@@ -207,4 +207,19 @@
   publisher = {Springer},
 }
 
+@Article{10.1371/journal.pbio.1001745,
+  author    = {Wilson, Greg AND Aruliah, D. A. AND Brown, C. Titus AND Chue Hong, Neil P. AND Davis, Matt AND Guy, Richard T. AND Haddock, Steven H. D. AND Huff, Kathryn D. AND Mitchell, Ian M. AND Plumbley, Mark D. AND Waugh, Ben AND White, Ethan P. AND Wilson, Paul},
+  title     = {Best Practices for Scientific Computing},
+  journal   = {PLOS Biology},
+  year      = {2014},
+  volume    = {12},
+  number    = {1},
+  pages     = {1-7},
+  month     = {01},
+  abstract  = {We describe a set of best practices for scientific software development, based on research and experience, that will improve scientists' productivity and the reliability of their software.},
+  doi       = {10.1371/journal.pbio.1001745},
+  publisher = {Public Library of Science},
+  url       = {https://doi.org/10.1371/journal.pbio.1001745},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

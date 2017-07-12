@@ -1,12 +1,16 @@
 ---
-output: 
-  html_document
+title: 'Open Source Projects: Best Practices for VisionEval'
+author: "| Dan Flynn \n| Volpe Center \n| daniel.flynn.ctr@dot.gov"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
 bibliography: refs/vewhitepaper.bib
 ---
 
-# Open Source Projects: Best Practices for VisionEval
-
 *Draft*
+
+# Summary
 
 This document outlines the proposed Best Practices whitepaper for the VisionEval project, regarding need for an open source approach to develop this collaborative research platform. 
 
@@ -22,7 +26,7 @@ This paper provides an overview of best practices for open source software devel
 2. [Open Source Governance](#opensourcegovernance)
 3. [Open Source Development](#opensourcedevelopment)
 4. [Git and GitHub](#git)
-5. [Summary](#summary)
+5. [Recommendations](#summary)
 
 ## 1.	Introduction 
 
@@ -106,7 +110,7 @@ Community engagement is extensive, with a web chat channel, Twitter account, wee
 
 `vegan` is a popular package of R tools for ecologists, with a focus on analysis of vegetation data. There are on average 800 weekly downloads of the package, and thousands of users. The package was developed originally by a single academic researcher, and now has 16 active contributors, and has been forked over 30 times. With vastly smaller scale than Node.js, this community of developers has not developed any formal governance structure, apparently relying on informal email communication between developers to coordinate pull requests. 
 
-Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license. Other than the license, there is a lack of any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
+Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license. This license or similar is recommended for scientific research projects [@Wilson2017], allowing reuse in commercial or noncommerical settings. Other than the license, this project lacks any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
 
 While this structure clearly works for a tool with an active academic group of users, VisionEval should strive to establish a clear governance structure which lays out roles and responsibilities of users, contributors, and leadership.
 
@@ -177,7 +181,7 @@ This model is illustrated below, showing how releases are made from the master b
 
 Unlike proprietary software project, open source research projects distinguish between a developer and user community. Contributions from the user community may be rare, typically limited to testing and bug reporting [@Aksulu2010]. Software code review by team members, however, typically follows well-established practice, with careful testing of software products early in the development cycle [@Thongtanunam2016]. The most formal realization of this type of code review involves developers meeting and reviewing printed-out code, line by line. Such review is impractical for large open source projects.
 
-Instead, many open source software projects follow what has been dubbed Modern Code Review (MCR), and is often called a lightweight code review. This type of code review dominates in practice [@Beller2014]. While identifying defects is a core goal of code review, modern code review now also seeks to transfer knowledge, increase awareness, and create of alternative solutions to problems as well [@McIntosh2016]. For scientific research, code review has been proposed to be become an important feature of the peer-review process, to the extent that some authors propose that all source code for statistical analyses must be open during peer review [@Shamir:2013aa].
+Instead, many open source software projects follow what has been dubbed Modern Code Review (MCR), and is often called a lightweight code review. This type of code review dominates in practice [@Beller2014]. While identifying defects is a core goal of code review, modern code review now also seeks to transfer knowledge, increase awareness, and create of alternative solutions to problems as well [@McIntosh2016]. For scientific research, code review has been proposed to be become an important feature of the peer-review process, to the extent that some authors propose that all source code for statistical analyses must be open during peer review [@shamir2013practices].
 
 GitHub (see below) and other online software repositories allow collaborative code review. The examples illustrated above (Node.js, vegan, and ActivitySim) all feature some way of evaluating code from the community of developers. The key elements of code review are identifying the community members who will carry out the review, having clear standards for what merits useful code to accept, and having a open record of what features are currently desired or being developed.
 
@@ -203,9 +207,9 @@ elasticity
 
 ### Git
 
-Git is a distributed version control system. Git is *distributed* because every user has a complete copy of the repository. Git is a *version control system* in that it tracks the changes to files, allowing useful changes to be incorporated with attribution to the authors.
+Git is a distributed version control system. Git is *distributed* because every user has a complete copy of the repository. Git is a *version control system* in that it tracks the changes to files, allowing useful changes to be incorporated with attribution to the authors. 
 
-At the most basic level, Git manages version control for plain-text files, by tracking changes made at the level of each character in the file. For an individual developer working independently, this feature is already useful, replacing the manual 'version control' commonly done by adding "v2" or the date to a file name. In Git, the most current version of each file is kept, and a snapshot of the differences with previous versions is also kept. Those difference files allow users to examine previous versions of files 
+At the most basic level, Git manages version control for plain-text files, by tracking changes made at the level of each character in the file. For an individual developer working independently, this feature is already useful, replacing the manual 'version control' commonly done by adding "v2" or the date to a file name. In Git, the most current version of each file is kept, and a snapshot of the differences with previous versions is also kept. Those difference files allow users to examine previous versions of files. 
 
 Other version control software, such as Apache Subversion (SVN), achieve this type of tracking changes for individual files as well. The major difference between Git and other version control systems is the distributed aspect, as opposed to a centralized system. In a centralized version control system like SVN, there is a single master copy of a project. Each developer has to connect to that master copy, make changes to files individually, and then submit it back to the master copy. While one person is working on a file, no other user can edit it. For a small group working on a closed-source project, SVN and similar systems serve very well.
 
@@ -215,7 +219,7 @@ Other distributed version control systems exists, such as [Bazaar](http://bazaar
 
 ### GitHub
 
-[GitHub](https://github.com) is the Internet platform supporting the use of Git. Git itself does not require the use of GitHub, as it can be used to track file versions on an a single computer. However, in nearly all instances users of Git are collaborating with others via GitHub. GitHub promotes collaboration by facilitating cloning repositories and creating pull requests (see below) to submit project improvements. The other major collaboration tools on GitHub are the presence of a wiki and the issue-tracking tools. 
+[GitHub](https://github.com) is the Internet platform supporting the use of Git. Git itself does not require the use of GitHub, as it can be used to track file versions on an a single computer. However, in nearly all instances users of Git are collaborating with others via GitHub. GitHub promotes collaboration by facilitating cloning repositories and creating pull requests (see below) to submit project improvements. The other major collaboration tools on GitHub are the presence of a wiki and the issue-tracking tools. Since repositories exist both on the machines of users and on GitHub servers, GitHub can be considered a form of file backup, but does not replace regular  
 
 Issue-tracking can be a powerful way for projects to engage users. The issue-tracking on GitHub provides a means for users to submit bugs or feature easily. Users submitting issues do not necessarily need to be developers with the time and ability to propose new code which solves those issues, simply users interested in improving the project. For example, an open-source data visualization project called Shiny has an active [issue tracking page](https://github.com/rstudio/shiny/issues), with some issues attracting multiple comments from other users, and discussion with the development team. In this case, the project is centralized in governance, with a software development company curating the project with input from users worldwide.
 
@@ -248,7 +252,7 @@ In addition to online discussions, periodic announcements by email can be useful
 <!-- general SO example: https://gis.stackexchange.com/questions/68349/are-there-open-source-solutions-for-travel-demand-modelling -->
 <!-- Disqus forum for GitHub pages: http://klcodanr.github.io/Jekyll-Disqus-Forum/ -->
 
-## 5.	Summary  <a name = "summary"></a>
+## 5.	Recommendations  <a name = "summary"></a>
 <!-- 
 - Summarize best practices
 -	Recommend practices and tools for the VisionEval team.

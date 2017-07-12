@@ -207,4 +207,44 @@
   publisher = {Springer},
 }
 
+@Article{Wilson2014,
+  author    = {Wilson, Greg AND Aruliah, D. A. AND Brown, C. Titus AND Chue Hong, Neil P. AND Davis, Matt AND Guy, Richard T. AND Haddock, Steven H. D. AND Huff, Kathryn D. AND Mitchell, Ian M. AND Plumbley, Mark D. AND Waugh, Ben AND White, Ethan P. AND Wilson, Paul},
+  title     = {Best Practices for Scientific Computing},
+  journal   = {PLOS Biology},
+  year      = {2014},
+  volume    = {12},
+  number    = {1},
+  pages     = {1-7},
+  month     = {01},
+  abstract  = {We describe a set of best practices for scientific software development, based on research and experience, that will improve scientists' productivity and the reliability of their software.},
+  doi       = {10.1371/journal.pbio.1001745},
+  publisher = {Public Library of Science},
+  url       = {https://doi.org/10.1371/journal.pbio.1001745},
+}
+
+@Article{shamir2013practices,
+  author    = {Shamir, Lior and Wallin, John F and Allen, Alice and Berriman, Bruce and Teuben, Peter and Nemiroff, Robert J and Mink, Jessica and Hanisch, Robert J and DuPrie, Kimberly},
+  title     = {Practices in source code sharing in astrophysics},
+  journal   = {Astronomy and Computing},
+  year      = {2013},
+  volume    = {1},
+  pages     = {54--58},
+  publisher = {Elsevier},
+}
+
+@Article{Wilson2017,
+  author    = {Wilson, Greg AND Bryan, Jennifer AND Cranston, Karen AND Kitzes, Justin AND Nederbragt, Lex AND Teal, Tracy K.},
+  title     = {Good enough practices in scientific computing},
+  journal   = {PLOS Computational Biology},
+  year      = {2017},
+  volume    = {13},
+  number    = {6},
+  pages     = {1-20},
+  month     = {06},
+  abstract  = {Author summary Computers are now essential in all branches of science, but most researchers are never taught the equivalent of basic lab skills for research computing. As a result, data can get lost, analyses can take much longer than necessary, and researchers are limited in how effectively they can work with software and data. Computing workflows need to follow the same practices as lab projects and notebooks, with organized data, documented steps, and the project structured for reproducibility, but researchers new to computing often don't know where to start. This paper presents a set of good computing practices that every researcher can adopt, regardless of their current level of computational skill. These practices, which encompass data management, programming, collaborating with colleagues, organizing projects, tracking work, and writing manuscripts, are drawn from a wide variety of published sources from our daily lives and from our work with volunteer organizations that have delivered workshops to over 11,000 people since 2010.},
+  doi       = {10.1371/journal.pcbi.1005510},
+  publisher = {Public Library of Science},
+  url       = {https://doi.org/10.1371/journal.pcbi.1005510},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

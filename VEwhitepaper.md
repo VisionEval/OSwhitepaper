@@ -155,6 +155,8 @@ Documenting and updating.
 -->
 
 ### Workflow for VisionEval
+<!--This section can be written in a similar style to the lest of the paper (less like a draft), but keep as recommendations to give flexibility to the TAC
+-->
 
 Contributions to the VisionEval project ideally should follow the typical `git` work flow, using the GitHub web interface as described in detail below. In summary, the `git` workflow involves creation of a repository (folder of files) of the working version of the code, which is distributed across all the developers. The distributed nature of the repository means that developers can independently make modifications and additions to the code, and then request that this code be incorporated into the main version to be shared with all users. The details of this work flow will be established by the Contributor Review Team, and are outlined here as a starting point.
 

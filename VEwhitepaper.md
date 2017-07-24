@@ -16,10 +16,9 @@ This document outlines the proposed Best Practices whitepaper for the VisionEval
 
 Open source development provides a platform for users and developers to engage in continuous, collaborative improvement of software tools. Collaboration via open source software development aligns with goals of public agencies involved in transportation planning, with a need to support freely-available decisionmaking tools which can be continuously improved by the user community and widely disseminated to promote effective transportation planning.
 
-[VisionEval](https://github.com/gregorbj/VisionEval) is an open source framework for building collaborative, disaggregate strategic planning models for transportation planners. These models are currently oriented towards providing easy-to use tools to visualize the impact of potential transportation policies, with the target audience being planners at state agencies and metropolitan planning organizations. The suite of modeling tools in the VisionEval framework includes the Regional Strategic Planning Model (RSPM), the Rapid Policy Assessment Tool (RPAT), and the Energy and Emissions Reduction Policy Analysis Tool ([EERPAT](https://www.planning.dot.gov/FHWA_tool/default.aspx)). 
+[VisionEval](https://github.com/gregorbj/VisionEval) is an open source framework for building collaborative, disaggregate strategic planning models for transportation planners. These models are currently oriented towards providing easy-to use tools to visualize the impact of potential transportation policies, with the target audience being planners at state agencies and metropolitan planning organizations. The suite of modeling tools in the VisionEval framework includes  [GreenSTEP](http://www.oregon.gov/ODOT/Planning/Documents/GreenSTEP-Model-Overview.pdf), the Regional Strategic Planning Model ([RSPM](https://github.com/gregorbj/RSPM)), the Rapid Policy Assessment Tool ([RPAT](https://github.com/gregorbj/VisionEval)), and the Energy and Emissions Reduction Policy Analysis Tool ([EERPAT](https://www.planning.dot.gov/FHWA_tool/default.aspx)). 
 
-This open-source framework is the result of collaborations among partner agencies, namely the Federal Highway Administration (FHWA) and the Oregon Department of Transportation (OregonDOT). The VisionEval framework aims to support a broad array of potential uses, and thus will require a plan for incorporating software contributed by the user and developer community to extend the current functionality beyond the current modules. 
-This paper provides an overview of best practices for open source software development for the VisionEval project. In particular, this paper outlines the process by which contributions will be evaluated and reviewed, and describes how version control and collaboration tools can be used to achieve this goal.
+This open-source framework is the result of collaborations among partner agencies, namely the Federal Highway Administration (FHWA), the Oregon Department of Transportation (OregonDOT), and the American Association of State Highway and Transportation Officials (AASHTO). The VisionEval framework aims to support a broad array of potential uses, and thus will require a plan for incorporating software contributed by the user and developer community to extend the current functionality beyond the current modules. This paper provides an overview of best practices for open source software development for the VisionEval project. In particular, this paper outlines the process by which contributions will be evaluated and reviewed, and describes how version control and collaboration tools can be used to achieve this goal.
 
 # Table of Contents
 1. [Introduction](#introduction)
@@ -30,19 +29,12 @@ This paper provides an overview of best practices for open source software devel
 
 ## 1.	Introduction 
 
-<!-- Discuss open source framework development of VisionEval, with an overview of best practices applicable to this project. -->
-
-<!-- Brian Gardner Comment 2017-04-14
-This enables a multi-year, collaborative research effort.
-It is not a line of business IT system.
-We will organize accordingly.
-
+<!-- Discuss open source framework development of VisionEval, with an overview of best practices applicable to this project.
 Draft Objectives for discussion
 1)	 Maintenance of open access to research results to all parties through aggregated copyrights
 2)	 Ability to build on prior research with clear copyrights
 3)	 Enable collective action across sectors and participants while maintaining equal access
 --> 
-<!--Examples of successful open source projects (R, QGIS) -->
 
 Open source software projects are developed by Internet-based communities of software developers, who voluntarily collaborate their code to build a software tool for the public benefit [@VonKrogh2003]. Open source projects attract a user and development community which can spur innovation and novel applications beyond what the original developers may have envisioned [@Bettenburg2015], and so have become core parts of numerous commercial and non-commercial software projects.  In the public sector, open source approaches have become the common in agencies as diverse as the [Department of Defense](http://dodcio.defense.gov/Open-Source-Software-FAQ/), [NASA](https://github.com/nasa/open-source-catalog), and the [Consumer Financial Protection Bureau](http://cfpb.github.io/source-code-policy/). 
 
@@ -77,8 +69,6 @@ For a research project such as VisionEval, a permissive license such as the [MIT
 An additional layer of licensing can be used to ensure that contributions to a project fall within the license of the project. Contributor License Agreements ([CLAs](https://www.clahub.com/pages/why_cla)) ensure that when a project accepts contributions from a third party, all necessary copyrights to release the code are in place. A CLA can provide extra assurance the governing organization of a project has all the appropriate permissions to incorporate patches or improvements to the project, and distribute the resulting work. A CLA may be unnecessary for open source project where concerns about patent or copyright infringement are minimal, and is mostly useful when a for-profit company submits patented code to an open-source project. For a project such as VisionEval, a CLA likely is not essential.    
 
 ## 2.	Open source governance <a name = "opensourcegovernance"></a>
-
-<!--	Roles: Users, developers, administrators.	Resources ($) required, and how to obtain them -->
 
 Achieving these benefits of open source tools requires a governance structure. There are multiple models of governance for open source projects. The distinction between commercial software projects and non-profit software projects provides a useful comparison for evaluating governance mechanism. The Android and Linux operating systems are both open source, and share an overall similar structure of how code is reviewed, with some crucial differences [@Bettenburg2015]. 
 
@@ -124,6 +114,11 @@ ActivitySim provides a platform for activity-based travel modeling. Like Node.js
 - **Funders** provide funding to support the development of the code and project administration, and may not be involved in the day-to-day of the project.
 - **Project Mangagement Committee** (PMC) members serve multiple roles. The PMC is composed of funders initially, and can include developers or committers in the future. As a group, the PMC provides oversight to the whole project. There is a PMC contractor, who acts as the lead organization to carry out the software development and administration, and is likely is the most active component of the Developer and Committer groups.
 
+ActivitySim has a detailed [decision-making](https://github.com/UDST/activitysim/wiki/Governance#decision-making) process, where the most common action (code change) requires no voting, with implicit approval unless a PMC member disagrees. This is also known as "lazy approval" or "lazy consensus", and has been used often in other open source projects (e.g., [Apache](https://forrest.apache.org/guidelines.html)). Another open source project ([`dash.js`](https://github.com/Dash-Industry-Forum/dash.js/wiki/Governance-model)) has written clearly why such implicit consensus is preferable for technical decisions:
+
+
+> <sub> The vast majority of decisions in an open source project are technical in nature and can therefore be driven by direct contributions to testing, feature management, documentation and code. All such decisions are cheap and easily reversible. We therefore make such decisions by "Lazy Consensus" - a process in which those with merit are trusted to "do the right thing". Non-technical decisions are often harder to reverse and are therefore made through "active consensus" - a process in which anyone can actively build consensus amongst those with merit. </sub>
+
 ActivitySim provides a useful model for VisionEval. Important decisions will include what the composition of the PMC or similar oversight group will be, what decision-making framework the PMC will follow, and how Committers and Developers will be designated. 
 
 
@@ -137,8 +132,7 @@ We will need to accomplish in the initial phase
 4)	 Make at least one maintenance release
 5)	 Define a relationship or uptake the ODOT sponsored work
 
-Let's use these tasks to test initial procedures and repository organizations, with input from ODOT on TLUMIP. 
-Lean on: http://stackoverflow.com/documentation/git/topics -->
+Let's use these tasks to test initial procedures and repository organizations, with input from ODOT on TLUMIP.  -->
 
 Open source development relies on a community of developers to produce, evaluate, and integrate code into a project. There are a number ways that development can be organized in an open source framework, but the most important features are ability to incorporate existing code from other projects, ability to develop features independently, and agreed-upon methods for developers to share their additions with the community of other developers and users.
 
@@ -146,8 +140,6 @@ Incorporating code from other other projects is central to open source developme
 
 As development of the VisionEval models has been occurring for several years already, substantial content exists for each of the four models: GreenSTEP, RPAT, RSPM, and EERPAT. The latter three build on the R functions of GreenSTEP, with emphases varying in scale (regional to state-level) and process of interest (land use, greenhouse gas emissions, transportation policies). As a group of free and open source tools, these tools share features and may benefit mutually from improvements in one particular model.
 
-<!-- Open source projects build on existing work, see Urban Foot print above -->
-<!-- to incorporate previous work on modules such as RPAT, update that module, and release a new version. -->
 <!-- Ideally, developers contribute to
 Reviewing code and maintaining working code base
 Testing code under new scenarios
@@ -155,18 +147,11 @@ Documenting and updating.
 -->
 
 ### Workflow for VisionEval
-<!--This section can be written in a similar style to the lest of the paper (less like a draft), but keep as recommendations to give flexibility to the TAC
--->
+<!--This section can be written in a similar style to the lest of the paper (less like a draft), but keep as recommendations to give flexibility to the TAC. DF: edited. -->
 
-Contributions to the VisionEval project ideally should follow the typical `git` work flow, using the GitHub web interface as described in detail below. In summary, the `git` workflow involves creation of a repository (folder of files) of the working version of the code, which is distributed across all the developers. The distributed nature of the repository means that developers can independently make modifications and additions to the code, and then request that this code be incorporated into the main version to be shared with all users. The details of this work flow will be established by the Contributor Review Team, and are outlined here as a starting point.
+Contributions to the VisionEval project ideally should follow the typical `git` work flow, using the GitHub web interface as described in detail below. The Pilot Contributor Review Team and Technical Advisory Committee will determine how to proceed; the following presents options for the workflow. In general, the `git` workflow involves creation of a repository (folder of files) of the working version of the code, which is distributed across all the developers. The distributed nature of the repository means that developers can independently make modifications and additions to the code, and then request that this code be incorporated into the main version to be shared with all users. The details of this work flow will be established by the Contributor Review Team, and are outlined here as a starting point.
 
-The essential steps are as follows:
-
--	Establish repository 
--	Add code 
--	Document and release
-
-The initial repository establishment will build off of the RPAT model. This can be done in several methods, one of which is outlined in the [Appendix](http://htmlpreview.github.io/?https://github.com/VisionEval/OSwhitepaper/blob/master/VEwhitepaper_Appendix.html). This would allow uptake of the previous RPAT model. This would be the version 1.0 release (or other version number), and would become the new master branch. Following the typical GitHub workflow (see [here](https://guides.github.com/introduction/flow/) and below), developers would then add code as necessary to resolve bugs and extend the model with additional features. Contributions from the community would be reviewed and accepted if useful, see below. Documentation of the software tool, essential to grow the community of users, would then be completed, and a new stable version would be released after passing integration tests using tools such as [Travis-CI](https://travis-ci.org/). Keeping the master branch as a stable release is ideal, with continuous development happening on other branches.
+The initial repository establishment will build off of the RPAT model. This can be done in several methods, one of which is outlined in the [Appendix](http://htmlpreview.github.io/?https://github.com/VisionEval/OSwhitepaper/blob/master/VEwhitepaper_Appendix.html). This procedure, or transfer of repository ownership, would complete the transfer of the RPAT model to the VisionEval project. This would be the version 1.0 release (or other version number), and would become the new master branch. Following the typical GitHub workflow (see [here](https://guides.github.com/introduction/flow/) and below), developers would then add code as necessary to resolve bugs and extend the model with additional features. Contributions from the community would be reviewed and accepted if useful, see below. Documentation of the software tool, essential to grow the community of users, would then be completed, and a new stable version would be released after passing integration tests using tools such as [Travis-CI](https://travis-ci.org/). Keeping the master branch as a stable release is ideal, with continuous development happening on other branches.
 
 This model is illustrated below, showing how releases are made from the master branch, while development occurs on other branches. Image from [nicoespeon.com](http://www.nicoespeon.com/en/2013/08/which-git-workflow-for-my-project/).
 
@@ -198,9 +183,7 @@ VisionEval should develop a clear work flow for code review, by following these 
 <!-- 
 ### Testing new contributions
 
-elasticity  
-
--	Scenario testing
+-	Scenario testing - elasticity  
 -	Model data sets
 -	Compare output to prior model versions
 -->
@@ -248,8 +231,9 @@ Major updates to projects may be documented by creating a release, which has a v
 Successful projects have a community of users who employ and improve the tools of the project. Users can become engaged in the project by contributing suggestions via the issue-tracking tool on GitHub, or directly contributing project improvements with pull requests. However, one common method of engaging users not supported by GitHub is a forum for users to ask general questions and share knowledge. <!-- The following sentence is not clear - check edits made -->
 Such forums include distribution platforms such as the [Open Source Application Development Portal](https://www.itsforge.net/index.php/community/discussion-forum) of the Federal Highway Administration, or individual project web pages, such as the [UrbanSim](http://discussion.urbansim.com/) project for planning and analysis of urban development. User forums of a sort also exist outside of official project web pages, for example on the highly active Stack Overflow site. This site which allows developers to ask and answer questions about specific problems with a tool, or about issues more general than one tool. A forum can be developed for a GitHub Pages site, which is a way to host a front-end website for a GitHub project.
 
-<!--Are these valid assumptions? Will you have less technical users that are not familiar with GitHub?-->
-For projects such as VisionEval which will likely have a small number of specialized users, a discussion forum may not be the most beneficial tool. Instead, using Issues on GitHub likely will present the best way for users to discuss specific technical topics about VisionEval tools. As users of VisionEval tools will be technically sophisticated enough to know about and use GitHub, keeping the online discussion on the GitHub pages will be the most convenient way to host discussions.
+<!--Are these valid assumptions? Will you have less technical users that are not familiar with GitHub? DF: Use of Issues should be relatively easy to understand. -->
+
+For projects such as VisionEval which will likely have a small number of specialized users, a discussion forum may not be the most beneficial tool. Instead, using Issues on GitHub likely will present the best way for users to discuss specific technical topics about VisionEval tools. As users of VisionEval tools will be technically sophisticated enough to know about and use GitHub, keeping the online discussion on the GitHub pages (namely, the Issue tracker) will be the most convenient way to host discussions. 
 
 In addition to online discussions, periodic announcements by email can be useful. Such announcements may be on at regular periods, or following releases of major updates or new modules. Maintaining a list of interested users would require some investment of effort for the centralized governing organization. Large open source projects with many active users do not typically have email announcements, but for VisionEval such announcements could be useful for engaging the community of users who are not developers. 
 
@@ -257,11 +241,6 @@ In addition to online discussions, periodic announcements by email can be useful
 <!-- Disqus forum for GitHub pages: http://klcodanr.github.io/Jekyll-Disqus-Forum/ -->
 
 ## 5.	Recommendations  <a name = "summary"></a>
-<!-- 
-- Summarize best practices
--	Recommend practices and tools for the VisionEval team.
--	Next steps
---> 
 
 As an ongoing open source development effort, VisionEval has already implemented key best practices, namely developing the software in an open, public fashion with documentation of the contributions being made. Making VisionEval a vibrant community of users and developers will require a few additional steps. These include:
 

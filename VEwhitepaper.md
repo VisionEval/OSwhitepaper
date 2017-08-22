@@ -95,13 +95,13 @@ Community engagement is extensive, with a web chat channel, Twitter account, wee
 
 `vegan` is a popular package of R tools for ecologists, with a focus on analysis of vegetation data. There are on average 800 weekly downloads of the package, and thousands of users. The package was developed originally by a single academic researcher, and now has 16 active contributors, and has been forked over 30 times. With vastly smaller scale than Node.js, this community of developers has not developed any formal governance structure, apparently relying on informal email communication between developers to coordinate pull requests. 
 
-Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license [^2]. This license or a similar one is recommended for scientific research projects [@Wilson2017], allowing reuse in commercial or noncommerical settings while guaranteeing access to the original source code. Other than the license, this project lacks any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
+Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license [^1]. This license or a similar one is recommended for scientific research projects [@Wilson2017], allowing reuse in commercial or noncommerical settings while guaranteeing access to the original source code. Other than the license, this project lacks any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
 
 While this structure clearly works for a tool with an active academic group of users, VisionEval should strive to establish a clear governance structure which lays out roles and responsibilities of users, contributors, and leadership.
 
 <!-- Jeremy: I haven't seen any justification up to this point for why VisionEval should do that.  Prior to making this recommendation, it is important to consider the particular characteristics of the desired VisionEval community that would support this claim. -->
 
-[^2] "Copyleft" is a term coined by the GNU project to refer to licenses that protect the rights of future users of the software to copy, study and modify the original code as well as code derived from it.  More permissive licenses such as the Apache license allow subsequent developers to assert proprietary rights over derivative works.
+[^1]: "Copyleft" is a term coined by the GNU project to refer to licenses that protect the rights of future users of the software to copy, study and modify the original code as well as code derived from it.  More permissive licenses such as the Apache license allow subsequent developers to assert proprietary rights over derivative works.
 
 #### Example travel model project: `ActivitySim`
 
@@ -109,18 +109,17 @@ ActivitySim provides a platform for activity-based travel modeling. Like Node.js
 
 - **Users** of the modeling tool may submit issues through GitHub to notify developers about bugs or request features.
 - **Developers** contribute code or documentation, and act in the "Contributor" role in Figure 1 above.
-- **Committers** can accept code from developers, and have signed a CLA. Committers apparently act in all three of the Review, Verification, and Integration steps in the figure. Committers are apparently designated by the Project Management Committee. 
+- **Committers** can accept code from developers, and have signed a CLA. Committers act in all three of the Review, Verification, and Integration steps in the figure. Committers are designated by the Project Management Committee. 
 - **Funders** support the development of the code and project administration, and may or may not be involved in the day-to-day of the project.
-- **Project Mangagement Committee** (PMC) members serve multiple roles. The PMC is composed of funders initially, but could include developers or committers in the future. As a group, the PMC provides oversight to the whole project. There is a PMC contractor, who acts as the lead organization to carry out the software development and administration, and is likely is the most active component of the Developer and Committer groups.
+- **Project Mangagement Committee** (PMC) members serve multiple roles. The PMC is composed of funders initially, but could include developers or committers in the future. As a group, the PMC provides oversight to the whole project. There is a PMC contractor, who acts as the lead organization to carry out the software development and administration, and is the most active component of the Developer and Committer groups.
 
 <!-- Jeremy, on 'apparently' and 'likely': I'm not sure what this qualifier means:  Somehow you must have learned that something like this happens (e.g. from a document).  Is there evidence that the actual practice differs from the documented process? -->
 
 ActivitySim has a detailed [decision-making](https://github.com/UDST/activitysim/wiki/Governance#decision-making) process, where the most common action (code change) requires no voting, with implicit approval unless a PMC member disagrees. This is also known as "lazy approval" or "lazy consensus", and has been used often in other open source projects (e.g., [Apache](https://forrest.apache.org/guidelines.html)). Another open source project ([`dash.js`](https://github.com/Dash-Industry-Forum/dash.js/wiki/Governance-model)) offer reasons why such implicit consensus is preferable for technical decisions:
 
-
 > <sub> The vast majority of decisions in an open source project are technical in nature and can therefore be driven by direct contributions to testing, feature management, documentation and code. All such decisions are cheap and easily reversible. We therefore make such decisions by "Lazy Consensus" - a process in which those with merit are trusted to "do the right thing". Non-technical decisions are often harder to reverse and are therefore made through "active consensus" - a process in which anyone can actively build consensus amongst those with merit. </sub>
 
-<!-- Non-technical decisions: Did they provide any examples of these? -->
+<!-- Non-technical decisions: Did they provide any examples of these? -- DF: no -->
 
 ActivitySim provides a useful model for VisionEval. Important decisions will include what the composition of the PMC or similar oversight group will be, what decision-making framework the PMC will follow, and how Committers and Developers will be designated. The remainder of this document illustrates how VisionEval development might be managed through such a structure.
 

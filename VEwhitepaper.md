@@ -2,11 +2,17 @@
 title: 'Open Source Projects: Best Practices for VisionEval'
 author: "| Dan Flynn \n| Volpe Center \n| daniel.flynn.ctr@dot.gov"
 output:
-  word_document: default
+  word_document:
+    fig_caption: yes
+    reference_docx: ve_style.docx
+    toc: no
   pdf_document: default
   html_document: default
 bibliography: refs/vewhitepaper.bib
 ---
+![](images/ve_logo.jpg "VisionEval")
+<!-- <img src="images/ve_logo.jpg" width="148"> -->
+
 
 # Summary
 
@@ -25,7 +31,7 @@ Because the VisionEval framework supports a broad array of potential application
 2. [Open Source Governance](#opensourcegovernance)
 3. [Open Source Development](#opensourcedevelopment)
 4. [Git and GitHub](#git)
-5. [Recommendations](#summary)
+5. [Recommendations](#recommendations)
 
 ## 1.	Introduction 
 
@@ -93,7 +99,7 @@ Community engagement is extensive, with a web chat channel, Twitter account, wee
 
 `vegan` is a popular package of R tools for ecologists, with a focus on analysis of vegetation data. There are on average 800 weekly downloads of the package, and thousands of users. The package was developed originally by a single academic researcher, and now has 16 active contributors, and has been forked over 30 times. With vastly smaller scale than Node.js, this community of developers has not developed any formal governance structure, apparently relying on informal email communication between developers to coordinate pull requests. 
 
-Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license [^1]. This license or a similar one is recommended for scientific research projects [@Wilson2017], allowing reuse in commercial or noncommerical settings while guaranteeing access to the original source code. Other than the license, this project lacks any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
+Some of the [documentation](http://vegan.r-forge.r-project.org/FAQ-vegan.html) of `vegan` is maintained by the single original developer, with the package itself containing documentation vetted by the contributors. The package is licensed under [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), a fairly permissive copyleft license [^1]. This license or a similar one is recommended for scientific research projects [@Wilson2017], allowing reuse in commercial or noncommercial settings while guaranteeing access to the original source code. Other than the license, this project lacks any formal governance structure, which may be common for open source projects which were designed by single users, even with a relatively large base of users.
 
 While this informal structure clearly works for a tool with an active academic group of users, a clear governance structure is likely to benefit a project such as VisionEval. For VisionEval, the mix of public agency, consultant, and academic users is both larger and more heterogeneous than the small academic project, so clear definition of roles and responsibilities of users, contributors, and leadership will be beneficial.
 
@@ -221,7 +227,7 @@ In addition to online discussions, periodic announcements by email can be useful
 <!-- general SO example: https://gis.stackexchange.com/questions/68349/are-there-open-source-solutions-for-travel-demand-modelling -->
 <!-- Disqus forum for GitHub pages: http://klcodanr.github.io/Jekyll-Disqus-Forum/ -->
 
-## 5.	Recommendations  <a name = "summary"></a>
+## 5.	Recommendations  <a name = "recommendations"></a>
 
 As an ongoing open source development effort, VisionEval has already implemented key best practices, namely developing the software in an open, public fashion with documentation of the contributions being made. Making VisionEval a vibrant community of users and developers will require a few additional steps. These include:
 

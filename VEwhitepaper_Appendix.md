@@ -1,7 +1,8 @@
 ---
-output: 
-  html_document
 bibliography: refs/vewhitepaper.bib
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 # Appendix to Open Source Projects: Best Practices for VisionEval

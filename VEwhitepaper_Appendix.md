@@ -1,8 +1,8 @@
 ---
 bibliography: refs/vewhitepaper.bib
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Appendix to Open Source Projects: Best Practices for VisionEval
@@ -52,3 +52,25 @@ If there are no subdirectories, simply `git filter-branch -d newrepo -- --all`. 
 5.	If necessary, [Transfer this to another GitHub user](https://help.GitHub.com/articles/transferring-a-repository-owned-by-your-personal-account/. 
 )
 This sends an email to the proposed new repository owner, asking them to confirm it.
+
+## Cloning a wiki
+
+Per [this StackOverflow post](https://stackoverflow.com/questions/16800999/fork-github-project-with-custom-wiki/33828142#33828142), an existing wiki from a repository can be cloned to a fork as follow.
+
+First, fork the `project` repository from `user1` account into `user2` account. 
+Create one wiki page in the forked version. [See here](https://stackoverflow.com/questions/40159478/fork-clone-and-push-a-wiki-in-github).
+Then inside the local machine version (local clone) of this newly-forked project: 
+
+```shell
+ git clone https://github.com/user1/project.wiki.git
+ git remote add my-fork https://github.com/user2/project.wiki.git
+ git push my-fork -f
+```
+
+To keep the wikis in sync:
+
+```shell
+ git pull origin master
+ git push my-fork master
+```
+
